@@ -10,10 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function openSidebar() {
     sidebar.classList.add('is-open');
     sidebarOverlay.classList.add('is-open');
+    sidebarToggle?.setAttribute('aria-expanded', 'true');
   }
   function closeSidebar() {
     sidebar.classList.remove('is-open');
     sidebarOverlay.classList.remove('is-open');
+    sidebarToggle?.setAttribute('aria-expanded', 'false');
   }
 
   sidebarToggle?.addEventListener('click', () => {
