@@ -1,0 +1,2236 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="https://cdn.discordapp.com/icons/1271538957728874497/817901283d33f6c6612273e0d22888ed.png?size=128"/><link rel="preload" as="image" href="https://cdn.discordapp.com/avatars/204221589883977728/4ffb42b5a43e301225d41ec5672197d6.webp?size=16"/><link rel="preload" as="image" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f517.svg"/><link rel="preload" as="image" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f5c3.svg"/><link rel="preload" as="image" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4bc.svg"/><link rel="preload" as="image" href="https://cdn.discordapp.com/emojis/1453797584199225355.png"/><link rel="preload" as="image" href="https://images-ext-1.discordapp.net/external/4eoGK0dxs2AVB1mydyH5Tq2-udsFvz_1YkTr5-hU6N8/https/i.ytimg.com/vi/wAN106jW2-Y/maxresdefault.jpg"/><link rel="preload" as="image" href="https://media.discordapp.net/attachments/1493995377903538287/1493998048286605484/background.png?ex=69e1019b&amp;is=69dfb01b&amp;hm=f17e9312ee7fe5a46e00c4325651a517ca7828b938727814efa6b159acd41d03&amp;"/><link rel="preload" as="image" href="https://images-ext-1.discordapp.net/external/4Ge0G0PtdI95jXxGS896En0hlRkL6kQC40gLhIWlyGM/https/cdn.discordapp.com/avatars/204221589883977728/4ffb42b5a43e301225d41ec5672197d6.webp"/><link rel="preload" as="image" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f916.svg"/><link rel="preload" as="image" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg"/><link rel="preload" as="image" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg"/><link rel="preload" as="image" href="https://cdn.discordapp.com/quests/1487111678947623013/1489014455265267713.jpg"/><link rel="icon" type="image/png" href="https://cdn.discordapp.com/icons/1271538957728874497/817901283d33f6c6612273e0d22888ed.png?size=128"/><title>testing</title><script>document.addEventListener("click",t=>{let e=t.target;if(!e)return;let o=e?.getAttribute("data-goto");if(o){let r=document.getElementById(`m-${o}`);r?(r.scrollIntoView({behavior:"smooth",block:"center"}),r.style.backgroundColor="rgba(148, 156, 247, 0.1)",r.style.transition="background-color 0.5s ease",setTimeout(()=>{r.style.backgroundColor="transparent"},1e3)):console.warn("Message ${goto} not found.")}});</script><script>(window.$discordMessage=window.$discordMessage||{}).profiles={"204221589883977728":{"author":"约 - Wick","avatar":"https://cdn.discordapp.com/avatars/204221589883977728/4ffb42b5a43e301225d41ec5672197d6.webp?size=64","roleName":"Testers","serverTagText":"ATL","serverTagBadge":"https://cdn.discordapp.com/guild-tag-badges/1172245377395728464/73d86ffb81cdcdc4f275eaf3b82fca31.webp?size=32","serverTagGuildId":"1172245377395728464","bot":false,"verified":false},"652505019920285707":{"author":"Wicks","avatar":"https://cdn.discordapp.com/avatars/652505019920285707/a_7303042b39b6dd44cf02282382bd2952.gif?size=64","roleName":"اثصاصثاثصاصث","bot":true,"verified":true},"1269809918995599392":{"author":"Wick - Tester","avatar":"https://cdn.discordapp.com/avatars/1269809918995599392/88a790c753050375412541824f9dd732.webp?size=64","roleName":"Wick - Tester","bot":true,"verified":false}};</script><script type="module" src="https://cdn.jsdelivr.net/npm/@derockdev/discord-components-core@^3.6.1/dist/derockdev-discord-components-core/derockdev-discord-components-core.esm.js"></script></head><body style="margin:0;min-height:100vh;background-color:#070709" data-transcript-image-preview="true"><discord-messages style="min-height:100vh"><style>
+  .discord-container {
+    display: grid;
+    gap: 4px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .discord-base-image {
+    overflow: hidden;
+    position: relative;
+    background: #2b2d31;
+  }
+
+  .discord-action-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  [slot="components"] {
+    width: 100%;
+  }
+
+  .discord-button {
+    color: #ffffff !important;
+    padding: 0 14px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    height: 34px;
+    min-height: 34px;
+    min-width: 78px;
+    cursor: pointer;
+    font-family: 'gg sans', 'Noto Sans', Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    outline: none;
+    transition: background-color 0.17s ease, border-color 0.17s ease, color 0.17s ease;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    gap: 8px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .discord-button:hover {
+    text-decoration: none !important;
+  }
+
+  .discord-button-content,
+  .discord-button-launch {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .discord-button-content {
+    gap: 8px;
+  }
+
+  .discord-button-emoji {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .discord-button-label {
+    line-height: 1;
+  }
+
+  .discord-button-launch {
+    color: inherit;
+    opacity: 0.9;
+  }
+
+  .discord-button:active {
+    transform: translateY(1px);
+  }
+
+  .discord-button-primary {
+    background-color: #5865f2;
+  }
+  .discord-button-primary:hover {
+    background-color: #4752c4;
+  }
+
+  .discord-button-secondary {
+    background-color: #4e5058;
+  }
+  .discord-button-secondary:hover {
+    background-color: #6d6f78;
+  }
+
+  .discord-button-success {
+    background-color: #248046;
+  }
+  .discord-button-success:hover {
+    background-color: #1a6334;
+  }
+
+  .discord-button-destructive {
+    background-color: #da373c;
+  }
+  .discord-button-destructive:hover {
+    background-color: #a12828;
+  }
+
+  .discord-button-link {
+    background-color: #2b2d31;
+    border-color: #3f4147;
+    color: #dbdee1 !important;
+    min-width: 0;
+  }
+  .discord-button-link:hover {
+    background-color: #35373c;
+    border-color: #4f545c;
+  }
+
+  .discord-select-menu {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-width: 0;
+    height: 40px;
+    background-color: #1e1f22;
+    border-radius: 8px;
+    color: #dbdee1;
+    cursor: pointer;
+    font-family: 'gg sans', 'Noto Sans', Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px solid #3f4147;
+    transition: border-color 0.2s, background-color 0.2s;
+    flex: 1 1 auto;
+  }
+
+  .discord-select-menu:hover {
+    background-color: #232428;
+    border-color: #4f545c;
+  }
+
+  .discord-select-menu-label {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #dbdee1;
+    font-weight: 500;
+  }
+
+  .discord-select-menu-chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    color: #b5bac1;
+  }
+
+  .discord-select-menu-options {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background-color: #2b2d31;
+    border-radius: 8px;
+    z-index: 10;
+    border: 1px solid #1e1f22;
+    max-height: 320px;
+    overflow-y: auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.24);
+  }
+
+  .discord-select-menu-options.open {
+    display: block;
+  }
+
+  .discord-select-menu-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.1s;
+    color: #dbdee1;
+  }
+
+  .discord-select-menu-option-emoji {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .discord-select-menu-option:hover {
+    background-color: #3f4147;
+    color: #ffffff;
+  }
+
+  .discord-attachment-gallery {
+    width: 100%;
+    max-width: 610px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .discord-attachment-gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #2b2d31;
+  }
+
+  .discord-attachment-gallery-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+  }
+
+  .discord-attachment-gallery-more {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .discord-message .discord-attachments > discord-attachment[type="file"] {
+    display: block;
+    width: auto;
+    max-width: min(520px, 100%);
+  }
+
+  .discord-custom-file-base {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: min(520px, 100%);
+    min-width: 0;
+    justify-self: stretch; /* fixes the derockdev discord-attachments grid expanding */
+    padding: 16px;
+    background-color: #2b2d31;
+    border: 1px solid #1e1f22;
+    border-radius: 8px;
+    box-sizing: border-box;
+    gap: 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .discord-custom-file-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .discord-custom-file-inner {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    gap: 2px;
+  }
+
+  .discord-custom-file-name {
+    color: #00a8fc;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+  }
+
+  .discord-custom-file-name:hover {
+    text-decoration: underline;
+  }
+
+  .discord-custom-file-size {
+    color: #8da3b9;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .discord-custom-file-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 8px;
+    cursor: pointer;
+    color: #b5bac1;
+    transition: color 0.15s ease;
+  }
+
+  .discord-custom-file-download:hover {
+    color: #dbdee1;
+  }
+
+  .discord-custom-file-download svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .discord-image-preview-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(5, 5, 7, 0.88);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.16s ease;
+    z-index: 9999;
+  }
+
+  .discord-image-preview-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .discord-image-preview-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: min(100vw - 48px, 1440px);
+    max-height: min(100vh - 48px, 1100px);
+  }
+
+  .discord-image-preview-image {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+    background: #111214;
+  }
+
+  .discord-image-preview-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(32, 34, 37, 0.9);
+    color: #f2f3f5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.16s ease, transform 0.16s ease;
+  }
+
+  .discord-image-preview-close:hover {
+    background: rgba(49, 51, 56, 0.96);
+  }
+
+  .discord-image-preview-close:active {
+    transform: scale(0.97);
+  }
+
+  .discord-transcript-header-bar {
+    position: sticky;
+    top: 0;
+    z-index: 9200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 48px;
+    padding: 8px 16px;
+    background: rgba(7, 7, 9, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    box-sizing: border-box;
+  }
+
+  .discord-transcript-header-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .discord-transcript-header-server-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 auto;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .discord-transcript-header-glyph,
+  .discord-transcript-header-avatar {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+  }
+
+  .discord-transcript-header-glyph {
+    color: #b5bac1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .discord-transcript-header-glyph--hash {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
+  .discord-transcript-header-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .discord-transcript-header-copy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .discord-transcript-header-title {
+    color: #f2f3f5;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    flex: 0 0 auto;
+  }
+
+  .discord-transcript-header-separator {
+    color: #4e5058;
+    flex: 0 0 auto;
+  }
+
+  .discord-transcript-header-topic {
+    color: #949ba4;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .discord-transcript-header-topic > * {
+    display: inline;
+  }
+
+  .discord-transcript-header-tools {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .discord-transcript-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 0 0 auto;
+  }
+
+  .discord-transcript-header-tool {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #b5bac1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    transition: background-color 0.16s ease, color 0.16s ease;
+  }
+
+  .discord-transcript-header-tool:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f2f3f5;
+  }
+
+  .discord-transcript-header-search-slot {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+    flex: 0 1 auto;
+  }
+
+  .discord-transcript-header-search-slot .discord-transcript-search-shell {
+    position: static;
+    top: auto;
+    right: auto;
+    max-width: none;
+    align-items: center;
+  }
+
+  .discord-transcript-header-search-slot .discord-transcript-search {
+    position: relative;
+    overflow: visible;
+    transform-origin: center right;
+  }
+
+  .discord-transcript-header-search-slot .discord-transcript-search-bar {
+    box-shadow: none;
+  }
+
+  .discord-transcript-header-search-slot .discord-transcript-search-meta {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: max-content;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    background: rgba(17, 18, 20, 0.98);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(16px);
+  }
+
+  .discord-transcript-search-shell {
+    position: fixed;
+    top: calc(env(safe-area-inset-top) + 16px);
+    right: calc(env(safe-area-inset-right) + 16px);
+    z-index: 9500;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 0;
+    max-width: calc(100vw - 24px);
+  }
+
+  .discord-transcript-search-shell.is-open {
+    gap: 8px;
+  }
+
+  .discord-transcript-search-toggle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: rgba(17, 18, 20, 0.92);
+    color: #dbdee1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(14px);
+    transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
+  }
+
+  .discord-transcript-search-toggle:hover {
+    background: rgba(27, 28, 32, 0.96);
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .discord-transcript-search-toggle:active {
+    transform: translateY(1px);
+  }
+
+  .discord-transcript-search-shell.is-open .discord-transcript-search-toggle {
+    color: #ffffff;
+    border-color: rgba(88, 101, 242, 0.35);
+    background: rgba(36, 38, 43, 0.96);
+  }
+
+  .discord-transcript-search {
+    width: 0;
+    max-width: 0;
+    display: grid;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px) scale(0.98);
+    transform-origin: top right;
+    pointer-events: none;
+    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease, width 0.16s ease, max-width 0.16s ease;
+  }
+
+  .discord-transcript-search-shell.is-open .discord-transcript-search {
+    width: min(248px, calc(100vw - 84px));
+    max-width: min(248px, calc(100vw - 84px));
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  .discord-transcript-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    height: 36px;
+    padding: 0 8px 0 12px;
+    border-radius: 8px;
+    border: 1px solid #2b2d31;
+    background: rgba(10, 11, 13, 0.98);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+    box-sizing: border-box;
+    transition: border-color 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease;
+  }
+
+  .discord-transcript-search-bar:focus-within {
+    border-color: #3f4147;
+    box-shadow: 0 0 0 1px rgba(88, 101, 242, 0.18), 0 12px 28px rgba(0, 0, 0, 0.24);
+    background: #070709;
+  }
+
+  .discord-transcript-search-input {
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    color: #f2f3f5;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .discord-transcript-search-input::placeholder {
+    color: #949ba4;
+  }
+
+  .discord-transcript-search-submit {
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #aeb4bb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition: background-color 0.16s ease, color 0.16s ease;
+  }
+
+  .discord-transcript-search-submit:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #f2f3f5;
+  }
+
+  .discord-transcript-search-meta {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-width: 0;
+    padding: 0 2px;
+  }
+
+  .discord-transcript-search.has-query .discord-transcript-search-meta {
+    display: flex;
+  }
+
+  .discord-transcript-search-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex: 0 0 auto;
+  }
+
+  .discord-transcript-search-count {
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    color: #b5bac1;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    flex: 1 1 auto;
+  }
+
+  .discord-transcript-search-button {
+    height: 30px;
+    min-width: 30px;
+    padding: 0 8px;
+    border-radius: 8px;
+    border: 1px solid #2b2d31;
+    background: rgba(30, 31, 34, 0.92);
+    color: #c9ced6;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.16s ease, border-color 0.16s ease, opacity 0.16s ease;
+  }
+
+  .discord-transcript-search-button:hover:not(:disabled) {
+    background: #2b2d31;
+    border-color: #3f4147;
+  }
+
+  .discord-transcript-search-button:disabled {
+    cursor: default;
+    opacity: 0.45;
+  }
+
+  .discord-transcript-search-button--ghost {
+    color: #b5bac1;
+  }
+
+  .discord-transcript-search-hint {
+    display: none;
+  }
+
+  discord-message.discord-search-match {
+    background: rgba(88, 101, 242, 0.08);
+    border-radius: 8px;
+    transition: background-color 0.16s ease, box-shadow 0.16s ease;
+  }
+
+  discord-message.discord-search-match--active {
+    background: rgba(88, 101, 242, 0.14);
+    box-shadow: 0 0 0 1px rgba(88, 101, 242, 0.55), 0 0 0 6px rgba(88, 101, 242, 0.12);
+  }
+
+  body[data-transcript-image-preview="true"] discord-attachment[type="image"] {
+    cursor: zoom-in;
+  }
+
+  body[data-transcript-image-preview="true"] .discord-embed-image img,
+  body[data-transcript-image-preview="true"] [slot="components"] img:not(.discord-button-emoji):not(.discord-select-menu-option-emoji):not(.discord-server-tag-badge),
+  body[data-transcript-image-preview="true"] .discord-container img:not(.discord-button-emoji):not(.discord-select-menu-option-emoji):not(.discord-server-tag-badge) {
+    cursor: zoom-in;
+  }
+
+  /* Background colors */
+  body,
+  .discord-dark-theme,
+  .discord-light-theme,
+  discord-messages,
+  .discord-messages {
+    background-color: #070709 !important;
+  }
+  .discord-message {
+    background-color: transparent !important;
+  }
+  .discord-message:hover {
+    background-color: #242428 !important;
+  }
+  .discord-message::selection,
+  .discord-message *::selection {
+    background-color: #242428;
+    color: inherit;
+  }
+  
+  /* Embed borders */
+  .discord-embed .discord-embed-wrapper,
+  [class*="discord-embed"] [class*="discord-embed-wrapper"],
+  discord-embed .discord-embed-wrapper,
+  discord-embed > .discord-embed > .discord-embed-wrapper {
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 4px !important;
+  }
+
+  /* APP badge */
+  .discord-application-tag[data-transcript-app-tag-kind="bot"] {
+    font-size: 0px !important;
+    letter-spacing: 0 !important;
+  }
+  .discord-application-tag[data-transcript-app-tag-kind="bot"]::after {
+    content: "APP";
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  /* Discord Server Tags */
+  .discord-server-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 6px;
+    padding: 2px 6px 2px 4px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(17, 18, 20, 0.55);
+    color: #dbdee1;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .discord-server-tag-badge {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .discord-server-tag-text {
+    letter-spacing: 0.02em;
+  }
+  .discord-message .discord-author-info .discord-author-role-icon {
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  .discord-author-info .discord-server-tag + .discord-author-role-icon {
+    margin-left: 0.375rem;
+  }
+  .discord-replied-message .discord-author-role-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex: 0 0 auto;
+  }
+  .discord-replied-message .discord-server-tag {
+    margin-left: 4px;
+    padding: 1px 5px 1px 3px;
+    font-size: 9px;
+  }
+  .discord-replied-message .discord-server-tag-badge {
+    width: 12px;
+    height: 12px;
+  }
+  .discord-light-theme .discord-server-tag {
+    border-color: rgba(116, 127, 141, 0.18);
+    background: rgba(116, 127, 141, 0.12);
+    color: #4f5660;
+  }
+
+  @media (min-width: 901px) {
+    .discord-transcript-search-toggle {
+      display: none;
+    }
+
+    .discord-transcript-search {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      pointer-events: auto;
+      width: 240px;
+    }
+  }
+
+  /* Mention Highlight Colors */
+  .discord-message.discord-highlight-mention,
+  .discord-message.discord-highlight {
+    background-color: rgba(250, 166, 26, 0.1) !important;
+  }
+  .discord-message.discord-highlight::before,
+  .discord-message.discord-highlight-mention::before {
+    background-color: #faa61a !important;
+  }
+
+  /* Heading line-height fix */
+  .discord-message h1, .discord-message h2, .discord-message h3 {
+    line-height: normal !important;
+    margin-top: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    html, body, .discord-messages {
+      max-width: 100vw;
+      overflow-x: clip;
+    }
+    
+    .discord-embed .discord-embed-wrapper,
+    [class*="discord-embed"] [class*="discord-embed-wrapper"],
+    discord-embed .discord-embed-wrapper {
+      max-width: calc(100vw - 32px) !important;
+    }
+
+    .discord-embed .discord-embed-media .discord-embed-video,
+    .discord-embed .discord-embed-image img,
+    .discord-embed .discord-embed-thumbnail img,
+    .discord-attachment,
+    discord-attachment,
+    .discord-attachment-generic,
+    .discord-attachment-generic-inner {
+      max-width: 100% !important;
+      height: auto !important;
+      min-width: 0 !important;
+    }
+
+    .discord-embed .discord-embed-wrapper .discord-embed-grid {
+      grid-template-columns: 1fr !important;
+      padding: 0.5rem !important;
+    }
+    
+    .discord-message {
+      padding-right: 12px !important;
+    }
+
+    .discord-action-row {
+      width: 100%;
+    }
+
+    .discord-select-menu {
+      width: 100%;
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    .discord-image-preview-overlay {
+      padding: 16px;
+    }
+
+    .discord-image-preview-close {
+      top: calc(env(safe-area-inset-top) + 14px);
+      right: calc(env(safe-area-inset-right) + 14px);
+    }
+
+    .discord-message .discord-author-info {
+      flex-wrap: wrap;
+      row-gap: 4px;
+    }
+
+    .discord-server-tag {
+      margin-left: 4px;
+      padding: 1px 5px 1px 3px;
+      font-size: 9px;
+    }
+
+    .discord-server-tag-badge {
+      width: 12px;
+      height: 12px;
+    }
+
+    .discord-message .discord-author-info .discord-author-role-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .discord-transcript-header-bar {
+      gap: 10px;
+      padding: 8px 12px;
+    }
+
+    .discord-transcript-header-server-icon {
+      width: 23px;
+      height: 23px;
+    }
+
+    .discord-transcript-header-copy {
+      gap: 6px;
+    }
+
+    .discord-transcript-header-title {
+      font-size: 15px;
+    }
+
+    .discord-transcript-header-topic {
+      font-size: 13px;
+    }
+
+    .discord-transcript-header-actions {
+      gap: 2px;
+    }
+
+    .discord-transcript-header-tool {
+      width: 30px;
+      height: 30px;
+    }
+
+    .discord-transcript-header-tool--hide-mobile {
+      display: none;
+    }
+
+    .discord-transcript-search-shell {
+      top: calc(env(safe-area-inset-top) + 12px);
+      right: calc(env(safe-area-inset-right) + 12px);
+      align-items: flex-end;
+      gap: 8px;
+    }
+
+    .discord-transcript-header-search-slot .discord-transcript-search-shell {
+      top: auto;
+      right: auto;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    .discord-transcript-search {
+      width: min(calc(100vw - 76px), 248px);
+    }
+
+    .discord-transcript-search-meta {
+      gap: 8px;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .discord-transcript-search-actions {
+      justify-content: flex-end;
+    }
+
+    .discord-transcript-search-count {
+      min-width: 0;
+    }
+
+    .discord-attachment-gallery {
+      max-width: calc(100vw - 32px);
+    }
+
+    .discord-message .discord-attachments > discord-attachment[type="file"] {
+      width: min(100%, calc(100vw - 92px));
+      max-width: min(520px, calc(100vw - 92px));
+    }
+
+    .discord-attachment-generic {
+      width: min(100%, calc(100vw - 92px)) !important;
+      max-width: min(520px, calc(100vw - 92px)) !important;
+      padding: 10px 12px !important;
+    }
+
+    .discord-invite {
+      width: min(100%, calc(100vw - 92px));
+      max-width: min(432px, calc(100vw - 92px));
+      padding: 14px !important;
+    }
+
+    .discord-invite .discord-invite-root {
+      grid-template-columns: 50px minmax(0, 1fr);
+    }
+
+    .discord-invite .discord-invite-join {
+      grid-column: 1 / -1;
+      justify-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box !important;
+      margin-top: 10px;
+    }
+
+    .discord-invite .discord-invite-counts {
+      flex-wrap: wrap;
+      row-gap: 6px;
+    }
+
+    .discord-invite .discord-invite-header {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: initial;
+    }
+
+    .discord-image-preview-stage {
+      max-width: calc(100vw - 32px);
+      max-height: calc(100vh - 32px);
+    }
+
+    .discord-voice-message {
+      width: min(100%, calc(100vw - 92px));
+      max-width: min(400px, calc(100vw - 92px));
+      padding: 8px 12px 8px 8px;
+      gap: 6px;
+    }
+
+    .discord-voice-waveform {
+      gap: 1px;
+    }
+
+    .discord-voice-waveform-bar {
+      width: 2px;
+      flex-basis: 2px;
+    }
+
+    .discord-voice-duration {
+      min-width: 28px;
+      font-size: 11px;
+    }
+
+    .discord-voice-speed {
+      padding: 2px 5px;
+      font-size: 11px;
+    }
+
+    .discord-voice-volume svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .discord-transcript-header-bar {
+      padding: 8px 10px;
+    }
+
+    .discord-transcript-header-server-icon,
+    .discord-transcript-header-glyph,
+    .discord-transcript-header-avatar {
+      width: 22px;
+      height: 22px;
+    }
+
+    .discord-transcript-header-topic,
+    .discord-transcript-header-separator {
+      display: none;
+    }
+
+    .discord-transcript-header-tools {
+      gap: 8px;
+    }
+
+    .discord-transcript-search-shell {
+      top: calc(env(safe-area-inset-top) + 10px);
+      right: calc(env(safe-area-inset-right) + 10px);
+      max-width: calc(100vw - 20px);
+    }
+
+    .discord-transcript-search-toggle {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+    }
+
+    .discord-transcript-search {
+      width: min(calc(100vw - 72px), 228px);
+    }
+
+    .discord-transcript-search-bar {
+      height: 38px;
+    }
+
+    .discord-invite {
+      width: min(100%, calc(100vw - 84px));
+      max-width: min(432px, calc(100vw - 84px));
+      padding: 12px !important;
+    }
+
+    .discord-message .discord-attachments > discord-attachment[type="file"] {
+      width: min(100%, calc(100vw - 84px));
+      max-width: min(520px, calc(100vw - 84px));
+    }
+
+    .discord-attachment-generic {
+      width: min(100%, calc(100vw - 84px)) !important;
+      max-width: min(520px, calc(100vw - 84px)) !important;
+      gap: 8px;
+      padding: 10px !important;
+    }
+
+    .discord-attachment-generic-icon > svg {
+      width: 26px;
+    }
+
+    .discord-invite .discord-invite-icon {
+      width: 44px !important;
+      height: 44px !important;
+      margin-right: 0 !important;
+      border-radius: 14px !important;
+    }
+
+    .discord-invite .discord-invite-title {
+      font-size: 15px !important;
+    }
+
+    .discord-invite .discord-invite-counts {
+      font-size: 13px !important;
+    }
+
+    .discord-button {
+      max-width: 100%;
+    }
+
+    .discord-voice-message {
+      width: min(100%, calc(100vw - 84px));
+      max-width: min(400px, calc(100vw - 84px));
+      border-radius: 20px;
+    }
+
+    .discord-voice-play-button {
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+    }
+  }
+
+  /* Code blocks */
+  .discord-message .discord-message-body code {
+    background-color: #1e1f22 !important;
+    padding: 0.2em 0.4em !important;
+    border-radius: 4px !important;
+    font-size: 85% !important;
+  }
+  .discord-message .discord-message-body pre {
+    border: 1px solid #1e1f22 !important;
+    border-radius: 4px !important;
+  }
+  .discord-code-block-pre,
+  .discord-code-block-pre--multiline,
+  .discord-code-block-pre--multiline.hljs {
+    background-color: #1e1f22 !important;
+    border-color: #1a1b1e !important;
+  }
+  .discord-ansi-code-block {
+    margin: 0;
+  }
+  .discord-ansi-code-block .discord-ansi-code {
+    background: transparent !important;
+    color: #dcddde;
+    display: block;
+    font-size: inherit !important;
+    padding: 0 !important;
+    white-space: break-spaces;
+  }
+
+  /* Invite cards */
+  .discord-invite {
+    background-color: #2b2d31 !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 8px !important;
+    width: min(432px, 100%);
+    max-width: min(432px, calc(100vw - 104px));
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .discord-invite .discord-invite-root {
+    display: grid !important;
+    grid-template-columns: 50px minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .discord-invite .discord-invite-info {
+    min-width: 0;
+  }
+  .discord-invite .discord-invite-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .discord-invite .discord-invite-counts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-width: 0;
+  }
+  .discord-invite .discord-invite-count {
+    min-width: 0;
+  }
+  .discord-invite .discord-invite-header {
+    color: #b5bac1 !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+  }
+  .discord-invite .discord-invite-icon {
+    background-color: #1e1f22 !important;
+    border-radius: 16px !important;
+  }
+  .discord-invite .discord-invite-join {
+    background-color: #248046 !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    padding: 0 16px !important;
+    margin-left: 0 !important;
+    max-width: 100%;
+    box-sizing: border-box !important;
+  }
+  .discord-invite .discord-invite-join:hover {
+    background-color: #1a6334 !important;
+  }
+
+  /* Custom styling for Forwards */
+  .discord-forwarding-pill {
+    display: flex;
+    align-items: center;
+    color: #8b8e95;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .discord-forwarding-pill svg {
+    margin-right: 4px;
+  }
+
+  /* Custom styling for System Message Thread Previews */
+  .discord-thread-preview-container {
+    position: relative;
+    margin-left: 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .discord-thread-preview-container::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    bottom: 50%;
+    left: -24px;
+    width: 24px;
+    border-left: 2px solid #4f545c;
+    border-bottom: 2px solid #4f545c;
+    border-bottom-left-radius: 6px;
+  }
+  .discord-thread-preview-box {
+    background-color: #2b2d31;
+    border: 1px solid #1e1f22;
+    border-radius: 8px;
+    padding: 12px;
+    max-width: 400px;
+  }
+  .discord-thread-preview-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #dbdee1;
+    margin-bottom: 4px;
+  }
+  .discord-thread-preview-header span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #00a8fc;
+  }
+  .discord-thread-preview-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .discord-thread-preview-message img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  .discord-thread-preview-message span {
+    font-size: 13px;
+    color: #B5BAC1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .discord-thread-preview-message strong {
+    color: #dbdee1;
+    font-weight: 500;
+  }
+
+  /* Custom styling for Discord Polls */
+  .discord-poll {
+    border: 1px solid #3f4147;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 8px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .discord-poll-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .discord-poll-question {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f2f3f5;
+  }
+  .discord-poll-subtitle {
+    font-size: 12px;
+    color: #949ba4;
+    font-weight: 400;
+  }
+  .discord-poll-answers {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .discord-poll-answer {
+    position: relative;
+    background-color: #2b2d31;
+    border: 1px solid #3f4147;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 44px;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+  }
+  .discord-poll-answer:hover {
+    border-color: #5865f2;
+  }
+  .discord-poll-answer.finalized {
+    cursor: default;
+    border-color: #3f4147;
+  }
+  .discord-poll-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #5865f2;
+    opacity: 0.2;
+    border-radius: 7px;
+    transition: width 0.3s ease;
+  }
+  .discord-poll-content {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    width: 100%;
+    height: 44px;
+    z-index: 1;
+    position: relative;
+    gap: 8px;
+    box-sizing: border-box;
+  }
+  .discord-poll-emoji {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+  .discord-poll-emoji img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .discord-poll-text {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #dbdee1;
+    font-weight: 500;
+  }
+  .discord-poll-votes {
+    font-size: 13px;
+    color: #949ba4;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .discord-poll-radio {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+  }
+  .discord-poll-footer {
+    font-size: 14px;
+    color: #949ba4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .discord-poll-footer-left {
+    font-size: 14px;
+    font-weight: 700;
+    color: #b5bac1;
+  }
+  .discord-poll-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .discord-poll-show-results {
+    color: #dbdee1;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .discord-poll-show-results:hover {
+    text-decoration: underline;
+  }
+  .discord-poll-vote-btn {
+    background-color: #5865f2;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .discord-poll-vote-btn:hover {
+    background-color: #4752c4;
+  }
+
+  /* Custom styling for Voice Messages */
+  .discord-voice-message {
+    display: flex;
+    align-items: center;
+    background-color: #2b2d31;
+    border-radius: 22px;
+    padding: 8px 16px 8px 8px;
+    margin-top: 4px;
+    width: min(100%, 400px);
+    max-width: min(400px, 100%);
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 8px;
+  }
+  .discord-voice-play-button {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    background-color: #5865f2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .discord-voice-waveform {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 24px;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .discord-voice-waveform-bar {
+    width: 3px;
+    flex: 0 0 3px;
+    min-height: 4px;
+    border-radius: 2px;
+    background-color: #5d5f6b;
+    transition: background-color 0.15s;
+  }
+  .discord-voice-duration {
+    font-size: 12px;
+    font-weight: 500;
+    color: #949ba4;
+    font-family: 'gg sans', 'Noto Sans', Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    white-space: nowrap;
+    min-width: 30px;
+  }
+  .discord-voice-speed {
+    background-color: #3f4147;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #dbdee1;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .discord-voice-volume {
+    color: #b5bac1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+</style><div class="discord-transcript-header-bar" data-channel-name="testing"><div class="discord-transcript-header-main"><img src="https://cdn.discordapp.com/icons/1271538957728874497/817901283d33f6c6612273e0d22888ed.png?size=128" alt="System Tester" class="discord-transcript-header-server-icon"/><span class="discord-transcript-header-glyph discord-transcript-header-glyph--hash" aria-hidden="true">#</span><div class="discord-transcript-header-copy"><span class="discord-transcript-header-title">testing</span><span class="discord-transcript-header-separator" aria-hidden="true">•</span><span class="discord-transcript-header-topic">This is the start of <!-- -->#testing channel<!-- -->.<!-- --></span></div></div><div class="discord-transcript-header-tools"><div class="discord-transcript-header-actions" aria-hidden="true"><button type="button" class="discord-transcript-header-tool discord-transcript-header-tool--hide-mobile" aria-label="Threads" title="Threads"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 5a3 3 0 0 1 3-3h8v2H8a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8v2H8a3 3 0 0 1-3-3V5Zm7 2h9v2h-9V7Zm0 4h7v2h-7v-2Zm0 4h5v2h-5v-2Z"></path></svg></button><button type="button" class="discord-transcript-header-tool discord-transcript-header-tool--hide-mobile" aria-label="Notifications" title="Notifications"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.1 2.75a2.9 2.9 0 0 1 5.8 0c2.14.62 3.6 2.57 3.6 4.87v4.29c0 .76.2 1.5.57 2.17l.73 1.29a1 1 0 0 1-.87 1.5H5.07a1 1 0 0 1-.87-1.5l.73-1.29c.38-.67.57-1.41.57-2.17V7.62c0-2.3 1.46-4.25 3.6-4.87ZM12 21a3 3 0 0 0 2.82-2H9.18A3 3 0 0 0 12 21Z"></path></svg></button><button type="button" class="discord-transcript-header-tool discord-transcript-header-tool--hide-mobile" aria-label="Pinned Messages" title="Pinned Messages"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.45 3.05a1 1 0 0 1 1.41 0l4.1 4.1a1 1 0 0 1 0 1.41l-1.28 1.28a3 3 0 0 0-.88 2.12v2.54a1 1 0 0 1-.3.71l-2.1 2.1a1 1 0 0 1-1.41 0l-3.7-3.7-5.58 5.58a1 1 0 1 1-1.41-1.41l5.58-5.58-3.7-3.7a1 1 0 0 1 0-1.41l2.1-2.1a1 1 0 0 1 .7-.3h2.55c.8 0 1.57-.32 2.12-.88l1.3-1.28Z"></path></svg></button><button type="button" class="discord-transcript-header-tool discord-transcript-header-tool--hide-mobile" aria-label="Member List" title="Member List"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12.5a3.25 3.25 0 1 0 0-6.5a3.25 3.25 0 0 0 0 6.5Zm-6.25 0a2.75 2.75 0 1 0 0-5.5a2.75 2.75 0 0 0 0 5.5Zm12.5 0a2.75 2.75 0 1 0 0-5.5a2.75 2.75 0 0 0 0 5.5ZM12 14c-3.37 0-6.25 1.7-6.25 4.13c0 .48.39.87.88.87h10.74c.49 0 .88-.39.88-.87C18.25 15.7 15.37 14 12 14Zm-8.93 1.32C1.78 15.87 1 16.7 1 17.66c0 .37.3.67.67.67h2.8c-.06-.27-.09-.56-.09-.85c0-.82.27-1.56.69-2.16Zm17.86 0c.42.6.69 1.34.69 2.16c0 .29-.03.58-.1.85h2.81c.37 0 .67-.3.67-.67c0-.96-.78-1.79-2.07-2.34Z"></path></svg></button></div><div class="discord-transcript-header-search-slot"></div></div></div><discord-message id="m-1493996743421853706" timestamp="2026-04-15T15:29:40.749Z" profile="204221589883977728"><discord-attachments slot="attachments"><discord-attachment type="image" size="3.06 MB" slot="attachment" url="https://cdn.discordapp.com/attachments/1493995377903538287/1493996742293717214/image.png?ex=69e10064&amp;is=69dfaee4&amp;hm=4c330c0d1a11d4a3e5d593aece684e3e372e4240b4197a70a7a7fdc1ca69ee3d&amp;" alt="image.png" width="1920" height="1080"></discord-attachment></discord-attachments></discord-message><discord-message id="m-1493996817447387378" timestamp="2026-04-15T15:29:58.398Z" profile="204221589883977728"><discord-attachments slot="attachments"><div class="discord-attachment-gallery" style="display:grid;gap:2px;width:100%;max-width:610px;border-radius:8px;overflow:hidden;grid-template-columns:1fr 1fr;grid-template-rows:auto" slot="attachment"><div class="discord-attachment-gallery-item" style="overflow:hidden;position:relative;background:#2b2d31"><img src="https://cdn.discordapp.com/attachments/1493995377903538287/1493996816901869741/image.png?ex=69e10076&amp;is=69dfaef6&amp;hm=3ff7bb5fb012911b8c846769aa0d29a0e38e18b6f4c5b03d40c81598be2a7994&amp;" alt="image.png" class="discord-attachment-gallery-image" loading="lazy" decoding="async"/></div><div class="discord-attachment-gallery-item" style="overflow:hidden;position:relative;background:#2b2d31"><img src="https://cdn.discordapp.com/attachments/1493995377903538287/1493996817426284775/image.png?ex=69e10076&amp;is=69dfaef6&amp;hm=54e4b4a4fc388e3942f06d566ec3f38f44c99a638cd2ba8f01748e930915ab69&amp;" alt="image.png" class="discord-attachment-gallery-image" loading="lazy" decoding="async"/></div></div></discord-attachments></discord-message><discord-message id="m-1493996821838827550" timestamp="2026-04-15T15:29:59.445Z" profile="204221589883977728"><discord-quote><div class="discord-forwarding-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M12.793 4.93175C12.793 4.10264 13.7845 3.67499 14.3879 4.24647L21.4646 10.9502C21.8211 11.288 21.8211 11.854 21.4646 12.1918L14.3879 18.8955C13.7845 19.467 12.793 19.0393 12.793 18.2102V15.008C7.58782 15.008 3.84478 16.5163 2.14691 20.3159C1.86518 20.9463 0.941961 20.6559 1.10091 19.982C2.41724 14.4011 5.95251 11.2588 12.793 10.7481V4.93175Z"></path></svg><span>Forwarded</span></div><discord-attachments><discord-attachment type="image" size="3.06 MB" slot="attachment" url="https://cdn.discordapp.com/attachments/1493995377903538287/1493996821532639272/image.png?ex=69e10077&amp;is=69dfaef7&amp;hm=401043971a0a63d38baf6d40060b367b16541fe0c423991e46a1111444ebf6c0&amp;" alt="image.png" width="1920" height="1080"></discord-attachment></discord-attachments><div style="color:#949ba4;font-size:12px;margin-top:4px;font-weight:500">#priv • <!-- -->01:36 AM</div></discord-quote></discord-message><discord-message id="m-1493996988973449216" timestamp="2026-04-15T15:30:39.293Z" profile="204221589883977728"><div class="discord-poll" slot="attachments"><div class="discord-poll-header"><div class="discord-poll-question"><strong>Testing Question</strong></div><div class="discord-poll-subtitle">Select one or more answers</div></div><div class="discord-poll-answers"><div class="discord-poll-answer "><div class="discord-poll-content"><span class="discord-poll-text">Answer 1</span><span class="discord-poll-radio"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#4f545c" stroke-width="2"></circle></svg></span></div></div><div class="discord-poll-answer "><div class="discord-poll-content"><span class="discord-poll-text">Answer 2</span><span class="discord-poll-radio"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#4f545c" stroke-width="2"></circle></svg></span></div></div></div><div class="discord-poll-footer"><span class="discord-poll-footer-left">1<!-- --> vote<!-- --> • 5h left</span><span class="discord-poll-footer-right"><span class="discord-poll-show-results">Show results</span><span class="discord-poll-vote-btn">Vote</span></span></div></div></discord-message><discord-system-message id="ms-1493997058992898139" type="thread"><i style="color:white">约 - Wick</i> <!-- -->started a thread: <strong>Test thread</strong>. See all <strong>threads</strong>.<div class="discord-thread-preview-container"><div class="discord-thread-preview-box"><div class="discord-thread-preview-header">Test thread<!-- --> <span>1<!-- --> Message &gt;</span></div><div class="discord-thread-preview-message"><img src="https://cdn.discordapp.com/avatars/204221589883977728/4ffb42b5a43e301225d41ec5672197d6.webp?size=16" alt="avatar"/><span><strong>wicknux</strong> started the thread</span></div></div></div></discord-system-message><discord-message id="m-1493997374421602445" timestamp="2026-04-15T15:32:11.191Z" profile="204221589883977728"><a href="https://www.youtube.com/@wick_studio" target="_blank" rel="noreferrer" style="color:#00a8fc;text-decoration:none">https://www.youtube.com/@wick_studio<!-- --></a><discord-embed embed-title="Wick Studio" slot="embeds" thumbnail="https://images-ext-1.discordapp.net/external/CNzuO3LuOm6qFsPXzoTPRM_bXp8_SQkjp_Bl4l8KKfw/https/yt3.googleusercontent.com/izyZ_P4NLu7NPQuP4x5ep5iJBBQhYVWSzKX-I_VqucD7M0FLqD25riVdDDhwzcOzWxnQPuuh1A%3Ds900-c-k-c0x00ffffff-no-rj" provider="YouTube" url="https://www.youtube.com/@wick_studio"></discord-embed></discord-message><discord-message id="m-1493997424551657482" timestamp="2026-04-15T15:32:23.143Z" profile="204221589883977728"><a href="https://youtu.be/wAN106jW2-Y?si=4_HeZVsIEaRpUdoH" target="_blank" rel="noreferrer" style="color:#00a8fc;text-decoration:none">https://youtu.be/wAN106jW2-Y?si=4_HeZVsIEaRpUdoH<!-- --></a><discord-embed embed-title="شرح شامل لـ Wicks Bot أفضل بوت لإدارة سير..." slot="embeds" author-name="Wick Studio" author-url="https://www.youtube.com/channel/UCJzH5Ua9rWW-uUYzWh-jjQg" color="#ff0000" provider="YouTube" url="https://www.youtube.com/watch?v=wAN106jW2-Y"><div slot="description" style="position:relative;margin-top:8px;border-radius:4px;overflow:hidden;max-width:400px"><a href="https://www.youtube.com/watch?v=wAN106jW2-Y" target="_blank" rel="noreferrer" style="display:block"><img src="https://images-ext-1.discordapp.net/external/4eoGK0dxs2AVB1mydyH5Tq2-udsFvz_1YkTr5-hU6N8/https/i.ytimg.com/vi/wAN106jW2-Y/maxresdefault.jpg" alt="شرح شامل لـ Wicks Bot أفضل بوت لإدارة سير..." style="width:100%;display:block;border-radius:4px"/><div style="position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:56px;height:56px;border-radius:50%;background-color:rgba(0, 0, 0, 0.6);display:flex;align-items:center;justify-content:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"></path></svg></div></a></div></discord-embed></discord-message><discord-message id="m-1493997520899149996" timestamp="2026-04-15T15:32:46.114Z" profile="204221589883977728"><discord-quote><div class="discord-forwarding-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M12.793 4.93175C12.793 4.10264 13.7845 3.67499 14.3879 4.24647L21.4646 10.9502C21.8211 11.288 21.8211 11.854 21.4646 12.1918L14.3879 18.8955C13.7845 19.467 12.793 19.0393 12.793 18.2102V15.008C7.58782 15.008 3.84478 16.5163 2.14691 20.3159C1.86518 20.9463 0.941961 20.6559 1.10091 19.982C2.41724 14.4011 5.95251 11.2588 12.793 10.7481V4.93175Z"></path></svg><span>Forwarded</span></div>Testing standard buttons and a string select menu<!-- -->.<!-- --><discord-attachments><discord-action-row><span class="discord-button discord-button-primary"><span class="discord-button-content"><span class="discord-button-label">Primary</span></span></span><span class="discord-button discord-button-secondary"><span class="discord-button-content"><span class="discord-button-label">Secondary</span></span></span><span class="discord-button discord-button-success"><span class="discord-button-content"><span class="discord-button-label">Success</span></span></span><span class="discord-button discord-button-destructive"><span class="discord-button-content"><span class="discord-button-label">Danger</span></span></span><a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="discord-button discord-button-link"><span class="discord-button-content"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f517.svg" alt="" class="discord-button-emoji" draggable="false"/><span class="discord-button-label">Link</span></span><span class="discord-button-launch" aria-hidden="true"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M15 2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V4.41l-4.3 4.3a1 1 0 1 1-1.4-1.42L19.58 3H16a1 1 0 0 1-1-1Z"></path><path fill="currentColor" d="M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-6a1 1 0 1 0-2 0v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6a1 1 0 1 0 0-2H5Z"></path></svg></span></a></discord-action-row><discord-action-row><div class="discord-select-menu"><div class="discord-select-menu-label">Make a selection!</div><div class="discord-select-menu-chevron" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></div><div class="discord-select-menu-options"><div class="discord-select-menu-option"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" alt="" class="discord-select-menu-option-emoji"/><span>Option 1</span></div><div class="discord-select-menu-option"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" alt="" class="discord-select-menu-option-emoji"/><span>Option 2</span></div></div></div></discord-action-row></discord-attachments><div style="color:#949ba4;font-size:12px;margin-top:4px;font-weight:500">#gwghwh • <!-- -->11:02 AM</div></discord-quote></discord-message><discord-message id="m-1493997543091339264" timestamp="2026-04-15T15:32:51.405Z" profile="652505019920285707"><discord-command slot="reply" profile="204221589883977728" command="/ping"></discord-command><discord-embed embed-title="📊 Bot Statistics" slot="embeds" color="#ababab"><discord-embed-fields slot="fields"><discord-embed-field field-title="🤖 Bot Status" inline-index="1"><discord-code-block language="" code="┣━ Latency: 34ms
+┗━ Uptime: 3d 0h 59m 7s"></discord-code-block></discord-embed-field><discord-embed-field field-title="📡 Shard Information" inline-index="1"><discord-code-block language="" code="┣━ Current Shard: #34
+┗━ Total Shards: 3"></discord-code-block></discord-embed-field><discord-embed-field field-title="📈 Statistics" inline-index="1"><discord-code-block language="" code="┣━ Servers: 3,101
+┗━ Users: 557,408"></discord-code-block></discord-embed-field></discord-embed-fields><discord-embed-footer slot="footer" footer-image="https://images-ext-1.discordapp.net/external/5OzoVSowqmC1odeC3gAuOFyw95GlR4EY2RtImZIpb6w/https/cdn.discordapp.com/avatars/652505019920285707/a_7303042b39b6dd44cf02282382bd2952.gif" timestamp="2026-04-15T15:32:51.302000+00:00">Shard 35<!-- -->/3 <!-- -->• Discord Bot<!-- --></discord-embed-footer></discord-embed></discord-message><discord-message id="m-1493997601165672630" timestamp="2026-04-15T15:33:05.251Z" profile="204221589883977728"><discord-quote><div class="discord-forwarding-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M12.793 4.93175C12.793 4.10264 13.7845 3.67499 14.3879 4.24647L21.4646 10.9502C21.8211 11.288 21.8211 11.854 21.4646 12.1918L14.3879 18.8955C13.7845 19.467 12.793 19.0393 12.793 18.2102V15.008C7.58782 15.008 3.84478 16.5163 2.14691 20.3159C1.86518 20.9463 0.941961 20.6559 1.10091 19.982C2.41724 14.4011 5.95251 11.2588 12.793 10.7481V4.93175Z"></path></svg><span>Forwarded</span></div><discord-attachments><div class="discord-voice-message" slot="attachment"><div class="discord-voice-play-button"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M8 5.14v14l11-7-11-7z"></path></svg></div><div class="discord-voice-waveform"><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:22px"></div><div class="discord-voice-waveform-bar" style="height:21px"></div><div class="discord-voice-waveform-bar" style="height:15px"></div><div class="discord-voice-waveform-bar" style="height:7px"></div><div class="discord-voice-waveform-bar" style="height:7px"></div><div class="discord-voice-waveform-bar" style="height:11px"></div><div class="discord-voice-waveform-bar" style="height:12px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:5px"></div><div class="discord-voice-waveform-bar" style="height:7px"></div><div class="discord-voice-waveform-bar" style="height:5px"></div><div class="discord-voice-waveform-bar" style="height:7px"></div><div class="discord-voice-waveform-bar" style="height:9px"></div><div class="discord-voice-waveform-bar" style="height:8px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:9px"></div><div class="discord-voice-waveform-bar" style="height:8px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:7px"></div><div class="discord-voice-waveform-bar" style="height:4px"></div><div class="discord-voice-waveform-bar" style="height:8px"></div><div class="discord-voice-waveform-bar" style="height:7px"></div><div class="discord-voice-waveform-bar" style="height:15px"></div><div class="discord-voice-waveform-bar" style="height:21px"></div><div class="discord-voice-waveform-bar" style="height:24px"></div></div><div class="discord-voice-duration">0:04</div><div class="discord-voice-speed">1X</div><div class="discord-voice-volume"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M11 5V19L4.5 14H2V10H4.5L11 5Z"></path><path fill="currentColor" d="M16.5 12C16.5 10.2 15.4 8.7 14 8V16C15.4 15.3 16.5 13.8 16.5 12Z"></path><path fill="currentColor" d="M14 3.2V5.3C16.9 6.1 19 8.8 19 12C19 15.2 16.9 17.9 14 18.7V20.8C18.1 19.9 21 16.3 21 12C21 7.7 18.1 4.1 14 3.2Z"></path></svg></div></div></discord-attachments><div style="color:#949ba4;font-size:12px;margin-top:4px;font-weight:500">#gwghwh • <!-- -->01:01 AM</div></discord-quote></discord-message><discord-message id="m-1493997714155901041" timestamp="2026-04-15T15:33:32.190Z" highlight="" profile="204221589883977728"><discord-mention type="role" highlight="">everyone</discord-mention> hi<!-- --></discord-message><discord-message id="m-1493997727313297441" timestamp="2026-04-15T15:33:35.327Z" highlight="" profile="204221589883977728"><discord-mention type="role" highlight="">here</discord-mention> hi<!-- --></discord-message><discord-message id="m-1493997748742000810" timestamp="2026-04-15T15:33:40.436Z" profile="204221589883977728"><discord-mention type="role" color="#000000">Testers</discord-mention> hi<!-- --></discord-message><discord-message id="m-1493997867386536158" timestamp="2026-04-15T15:34:08.723Z" profile="204221589883977728"><discord-quote><div class="discord-forwarding-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M12.793 4.93175C12.793 4.10264 13.7845 3.67499 14.3879 4.24647L21.4646 10.9502C21.8211 11.288 21.8211 11.854 21.4646 12.1918L14.3879 18.8955C13.7845 19.467 12.793 19.0393 12.793 18.2102V15.008C7.58782 15.008 3.84478 16.5163 2.14691 20.3159C1.86518 20.9463 0.941961 20.6559 1.10091 19.982C2.41724 14.4011 5.95251 11.2588 12.793 10.7481V4.93175Z"></path></svg><span>Forwarded</span></div><discord-attachments><div style="display:flex;width:100%;max-width:628px;flex-direction:column;background-color:#111214;padding:16px;border:1px solid rgba(255, 255, 255, 0.08);border-left:4px solid #06c2fb;margin-top:2px;margin-bottom:2px;border-radius:8px;gap:8px;box-sizing:border-box;min-width:0"><div style="width:100%;min-width:0"><discord-spoiler><discord-mention type="role">deleted-role</discord-mention></discord-spoiler></div><div style="width:100%;min-width:0"><span style="font-size:11px;color:#B5BAC1;display:block;margin-top:4px;line-height:normal">-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- -->-<!-- --></span></div><div style="width:100%;min-width:0"><h1 style="margin:8px 0;padding:0;font-weight:bold">م<!-- -->ه<!-- -->م<!-- -->ة <!-- -->ج<!-- -->د<!-- -->ي<!-- -->د<!-- -->ة <!-- -->م<!-- -->ت<!-- -->ا<!-- -->ح<!-- -->ة<!-- -->!<!-- --></h1></div><div style="width:100%;min-width:0"><h2 style="margin:8px 0;padding:0;font-weight:bold">ا<!-- -->ل<!-- -->م<!-- -->ك<!-- -->ا<!-- -->ف<!-- -->آ<!-- -->ت<!-- -->:<!-- --></h2>• 200 Orbs <!-- --><discord-custom-emoji name="orbIcon" url="https://cdn.discordapp.com/emojis/1490110440057999451.png"></discord-custom-emoji><br/><br/><h2 style="margin:8px 0;padding:0;font-weight:bold">ا<!-- -->ل<!-- -->م<!-- -->ه<!-- -->ا<!-- -->م<!-- -->:<!-- --></h2>• Watch a video on mobile <!-- -->ل<!-- -->م<!-- -->د<!-- -->ة <!-- -->٤<!-- -->٣ <!-- -->ث<!-- -->ا<!-- -->ن<!-- -->ي<!-- -->ة<!-- --></div><div style="width:100%;min-width:0"><discord-bold>ا<!-- -->س<!-- -->م <!-- -->ا<!-- -->ل<!-- -->ل<!-- -->ع<!-- -->ب<!-- -->ة<!-- -->:<!-- --></discord-bold><br/>Star Trek Fleet Command<!-- --></div><div style="width:100%;min-width:0"><discord-bold>ا<!-- -->س<!-- -->م <!-- -->ا<!-- -->ل<!-- -->م<!-- -->ه<!-- -->م<!-- -->ة<!-- -->:<!-- --></discord-bold><br/>Star Trek Fleet Command Mobile<!-- --></div><div style="width:100%;min-width:0"><discord-bold>ت<!-- -->ب<!-- -->د<!-- -->أ <!-- -->ف<!-- -->ي<!-- -->:<!-- --></discord-bold><br/><span class="discord-time">02/04/2026</span> <!-- --><span class="discord-time">20:00</span> <!-- -->(<!-- --><span class="discord-time">13 days ago</span>)<!-- --></div><div style="width:100%;min-width:0"><discord-bold>ت<!-- -->ن<!-- -->ت<!-- -->ه<!-- -->ي <!-- -->ف<!-- -->ي<!-- -->:<!-- --></discord-bold><br/><span class="discord-time">12/04/2026</span> <!-- --><span class="discord-time">03:00</span> <!-- -->(<!-- --><span class="discord-time">4 days ago</span>)<!-- --></div><div style="width:100%;min-width:0"><span style="font-size:11px;color:#B5BAC1;display:block;margin-top:4px;line-height:normal"><span class="discord-time">Thursday, 2 April 2026 20:00</span></span></div><div style="display:grid;gap:4px;width:100%;max-width:500px;border-radius:8px;overflow:hidden;grid-template-columns:1fr;grid-template-rows:auto"><div style="overflow:hidden;position:relative;background:#2b2d31"><img src="https://cdn.discordapp.com/quests/1487111678947623013/1489014455265267713.jpg" alt="Media content" style="width:100%;height:100%;object-fit:cover"/></div></div><discord-action-row><a href="https://discord.com/quests/1487111678947623013" target="_blank" rel="noopener noreferrer" class="discord-button discord-button-link"><span class="discord-button-content"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f517.svg" alt="" class="discord-button-emoji" draggable="false"/><span class="discord-button-label">عرض المهمة</span></span><span class="discord-button-launch" aria-hidden="true"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M15 2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V4.41l-4.3 4.3a1 1 0 1 1-1.4-1.42L19.58 3H16a1 1 0 0 1-1-1Z"></path><path fill="currentColor" d="M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-6a1 1 0 1 0-2 0v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6a1 1 0 1 0 0-2H5Z"></path></svg></span></a><span class="discord-button discord-button-secondary"><span class="discord-button-content"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f916.svg" alt="" class="discord-button-emoji" draggable="false"/><span class="discord-button-label"></span></span></span></discord-action-row></div></discord-attachments><div style="color:#949ba4;font-size:12px;margin-top:4px;font-weight:500">#gwghwh • <!-- -->11:55 AM</div></discord-quote></discord-message><discord-message id="m-1493998048563691591" timestamp="2026-04-15T15:34:51.919Z" profile="204221589883977728"><discord-quote><div class="discord-forwarding-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M12.793 4.93175C12.793 4.10264 13.7845 3.67499 14.3879 4.24647L21.4646 10.9502C21.8211 11.288 21.8211 11.854 21.4646 12.1918L14.3879 18.8955C13.7845 19.467 12.793 19.0393 12.793 18.2102V15.008C7.58782 15.008 3.84478 16.5163 2.14691 20.3159C1.86518 20.9463 0.941961 20.6559 1.10091 19.982C2.41724 14.4011 5.95251 11.2588 12.793 10.7481V4.93175Z"></path></svg><span>Forwarded</span></div><discord-mention type="user">约 - Wick</discord-mention> <!-- -->| <!-- --><discord-mention type="role">deleted-role</discord-mention><div class="discord-embed"><div class="discord-left-border"></div><div class="discord-embed-root"><div class="discord-embed-wrapper"><div class="discord-embed-grid"><div class="discord-embed-fields"><div class="discord-embed-field discord-embed-inline-field discord-embed-inline-field-1"><div class="discord-field-title">[<!-- --><discord-custom-emoji name="👤" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f464.svg" embed-emoji=""></discord-custom-emoji>] <!-- -->: Ticket Owner<!-- --></div><discord-mention type="user">约 - Wick</discord-mention></div><div class="discord-embed-field discord-embed-inline-field discord-embed-inline-field-2"><div class="discord-field-title">[<!-- --><discord-custom-emoji name="🛡" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f6e1.svg" embed-emoji=""></discord-custom-emoji>] <!-- -->: Ticket Admins<!-- --></div><discord-mention type="role">deleted-role</discord-mention></div><div class="discord-embed-field"><div class="discord-field-title">[<!-- --><discord-custom-emoji name="📆" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4c6.svg" embed-emoji=""></discord-custom-emoji>] <!-- -->: Ticket Date<!-- --></div><span class="discord-time">Wednesday, 15 April 2026 18:34</span></div><div class="discord-embed-field discord-embed-inline-field discord-embed-inline-field-1"><div class="discord-field-title">[<!-- --><discord-custom-emoji name="🔢" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f522.svg" embed-emoji=""></discord-custom-emoji>] <!-- -->: Ticket Number<!-- --></div><pre class="discord-code-block-pre discord-code-block-pre--multiline discord-ansi-code-block"><code class="discord-ansi-code"><span style="color:#b58900">20927</span></code></pre></div><div class="discord-embed-field discord-embed-inline-field discord-embed-inline-field-2"><div class="discord-field-title">[<!-- --><discord-custom-emoji name="❔" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2754.svg" embed-emoji=""></discord-custom-emoji>] <!-- -->: Ticket Section<!-- --></div><pre class="discord-code-block-pre discord-code-block-pre--multiline discord-ansi-code-block"><code class="discord-ansi-code"><span style="color:#268bd2">Higher Managment | ادارة عليا</span></code></pre></div></div><div class="discord-embed-media"><img src="https://media.discordapp.net/attachments/1493995377903538287/1493998048286605484/background.png?ex=69e1019b&amp;is=69dfb01b&amp;hm=f17e9312ee7fe5a46e00c4325651a517ca7828b938727814efa6b159acd41d03&amp;" alt="Discord embed media" class="discord-embed-image"/></div><img src="https://images-ext-1.discordapp.net/external/4Ge0G0PtdI95jXxGS896En0hlRkL6kQC40gLhIWlyGM/https/cdn.discordapp.com/avatars/204221589883977728/4ffb42b5a43e301225d41ec5672197d6.webp" alt="" class="discord-embed-thumbnail"/></div></div></div></div><discord-attachments><discord-action-row><span class="discord-button discord-button-secondary"><span class="discord-button-content"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f5c3.svg" alt="" class="discord-button-emoji" draggable="false"/><span class="discord-button-label">Ticket Options</span></span></span><span class="discord-button discord-button-secondary"><span class="discord-button-content"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4bc.svg" alt="" class="discord-button-emoji" draggable="false"/><span class="discord-button-label">Claim</span></span></span></discord-action-row></discord-attachments><div style="color:#949ba4;font-size:12px;margin-top:4px;font-weight:500">06:34 PM</div></discord-quote></discord-message><discord-message id="m-1493998243611410502" timestamp="2026-04-15T15:35:38.422Z" profile="204221589883977728"><discord-quote><div class="discord-forwarding-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path fill="currentColor" d="M12.793 4.93175C12.793 4.10264 13.7845 3.67499 14.3879 4.24647L21.4646 10.9502C21.8211 11.288 21.8211 11.854 21.4646 12.1918L14.3879 18.8955C13.7845 19.467 12.793 19.0393 12.793 18.2102V15.008C7.58782 15.008 3.84478 16.5163 2.14691 20.3159C1.86518 20.9463 0.941961 20.6559 1.10091 19.982C2.41724 14.4011 5.95251 11.2588 12.793 10.7481V4.93175Z"></path></svg><span>Forwarded</span></div>Oh Wow<!-- --><div style="color:#949ba4;font-size:12px;margin-top:4px;font-weight:500">#moderator-only • <!-- -->06:35 PM</div></discord-quote><discord-reactions slot="reactions"><discord-reaction name="Hearts" emoji="https://cdn.discordapp.com/emojis/1366109934231752734.gif" count="1"></discord-reaction><discord-reaction name="👍" emoji="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f44d.svg" count="1"></discord-reaction></discord-reactions></discord-message><discord-message id="m-1493999206128549938" timestamp="2026-04-15T15:39:27.904Z" profile="652505019920285707"><discord-embed slot="embeds" image="https://media.discordapp.net/attachments/1493995377903538287/1493999206254248150/background.png?ex=69e102af&amp;is=69dfb12f&amp;hm=569b1b2047eb3b9baadc84aef50ff6c10aa0c3fb37f936d576e5a8e6929a2df5&amp;"></discord-embed><discord-attachments slot="components"><discord-action-row><span class="discord-button discord-button-primary"><span class="discord-button-content"><img src="https://cdn.discordapp.com/emojis/1453797584199225355.png" alt="" class="discord-button-emoji" draggable="false"/><span class="discord-button-label">Testing</span></span></span></discord-action-row></discord-attachments></discord-message><discord-message id="m-1493999534706000073" timestamp="2026-04-15T15:40:46.243Z" profile="1269809918995599392">Here is the transcript<!-- --><discord-attachments slot="attachments"><div class="discord-custom-file-base" slot="attachment"><div class="discord-custom-file-icon"><svg width="30" height="40" viewBox="0 0 30 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 0H4C1.79086 0 0 1.79086 0 4V36C0 38.2091 1.79086 40 4 40H26C28.2091 40 30 38.2091 30 36V12L18 0Z" fill="#C9CDD3"></path><path d="M18 0L30 12H18V0Z" fill="#88919E"></path></svg></div><div class="discord-custom-file-inner"><a class="discord-custom-file-name" href="https://cdn.discordapp.com/attachments/1493995377903538287/1493999534550814901/transcript-1493995377903538287.html?ex=69e102fe&amp;is=69dfb17e&amp;hm=5c0c34630789dbc49e48bc7d77d7cdcae54ae80bb3a0e20b26cf5423a36873cb&amp;" target="_blank" rel="noopener noreferrer">transcript-1493995377903538287.html</a><div class="discord-custom-file-size">83.61 KB</div></div><a class="discord-custom-file-download" href="https://cdn.discordapp.com/attachments/1493995377903538287/1493999534550814901/transcript-1493995377903538287.html?ex=69e102fe&amp;is=69dfb17e&amp;hm=5c0c34630789dbc49e48bc7d77d7cdcae54ae80bb3a0e20b26cf5423a36873cb&amp;" download=""><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.293 9.29289C16.6835 8.90237 17.3167 8.90237 17.7072 9.29289C18.0977 9.68342 18.0977 10.3166 17.7072 10.7071L12.7072 15.7071C12.3167 16.0976 11.6835 16.0976 11.293 15.7071L6.29297 10.7071C5.90244 10.3166 5.90244 9.68342 6.29297 9.29289C6.68349 8.90237 7.31666 8.90237 7.70718 9.29289L11.0001 12.5858V2C11.0001 1.44772 11.4478 1 12.0001 1C12.5524 1 13.0001 1.44772 13.0001 2V12.5858L16.293 9.29289ZM3 19C2.44772 19 2 19.4477 2 20C2 20.5523 2.44772 21 3 21H21C21.5523 21 22 20.5523 22 20C22 19.4477 21.5523 19 21 19H3Z"></path></svg></a></div></discord-attachments></discord-message><discord-message id="m-1494000093756653769" timestamp="2026-04-15T15:42:59.531Z" profile="204221589883977728"><h2 style="margin:8px 0;padding:0;font-weight:bold">discord<!-- -->.js<!-- -->-html<!-- -->-transcript<!-- --></h2><br/><h3 style="margin:8px 0;padding:0;font-weight:bold"><discord-custom-emoji name="✏️" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/270f.svg"></discord-custom-emoji> Basic Formatting<!-- --></h3><br/><discord-bold>Bold Text<!-- --></discord-bold><br/><discord-italic>Italic Text<!-- --></discord-italic><br/><discord-italic><discord-bold>Bold <!-- -->&amp; Italic<!-- --></discord-bold></discord-italic><br/><discord-bold>Underline<!-- --></discord-bold><br/><s>Strikethrough<!-- --></s><br/><discord-spoiler>Spoiler<!-- --></discord-spoiler></discord-message><discord-message id="m-1494000131199074515" timestamp="2026-04-15T15:43:08.458Z" profile="204221589883977728"><h3 style="margin:8px 0;padding:0;font-weight:bold"><discord-custom-emoji name="🔗" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f517.svg"></discord-custom-emoji> Links<!-- --></h3><br/><a href="https://google.com">Click Me<!-- --></a><br/><div style="margin-top:4px"><a href="https://discord.gg/V2sNUnBPju" target="_blank" rel="noreferrer" style="color:#00a8fc;text-decoration:none">https://discord.gg/V2sNUnBPju<!-- --></a><discord-invite url="https://discord.gg/V2sNUnBPju" name="Wick® Studio" icon="https://cdn.discordapp.com/icons/1061971978845700176/a_4cb3408c825f1fbf4d7ea209222618e0.gif?size=64" online="3165" members="16679" join-btn="Go to Server" invite-title="YOU&#x27;VE BEEN INVITED TO JOIN A SERVER"></discord-invite></div><br/><div style="margin-top:4px"><a href="https://discord.gg/wicktesting2026" target="_blank" rel="noreferrer" style="color:#00a8fc;text-decoration:none">https://discord.gg/wicktesting2026<!-- --></a><div class="discord-invite" style="margin-top:4px"><div class="discord-invite-header">You sent an invite, but...</div><div style="display:flex;align-items:center;gap:12px;padding:4px 0"><span style="font-size:24px">✉️</span><div><div style="color:#f23f42;font-weight:700;font-size:16px">Invalid Invite</div><div style="color:#b5bac1;font-size:14px">Try sending a new invite!</div></div></div></div></div><discord-embed embed-title="Google" slot="embeds" url="https://google.com/"><discord-embed-description slot="description">Search the world<!-- -->&#x27;s information<!-- -->, including webpages<!-- -->, images<!-- -->, videos and more<!-- -->. Google has many special features to help you find exactly what you<!-- -->&#x27;re looking for<!-- -->.<!-- --></discord-embed-description></discord-embed></discord-message><discord-message id="m-1494000191718817913" timestamp="2026-04-15T15:43:22.887Z" profile="204221589883977728"><h3 style="margin:8px 0;padding:0;font-weight:bold"><discord-custom-emoji name="📌" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4cc.svg"></discord-custom-emoji> Mentions<!-- --></h3><br/><discord-mention type="user">约 - Wick</discord-mention> <!-- --><br/><discord-mention type="role" color="#000000">Testers</discord-mention> <!-- --><br/><discord-mention type="channel">testing</discord-mention></discord-message><discord-message id="m-1494000225721782282" timestamp="2026-04-15T15:43:30.994Z" profile="204221589883977728"><h3 style="margin:8px 0;padding:0;font-weight:bold"><discord-custom-emoji name="💬" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4ac.svg"></discord-custom-emoji> Blockquotes<!-- --></h3><br/><discord-quote>This is a blockquote<!-- --></discord-quote></discord-message><discord-message id="m-1494000272492728400" timestamp="2026-04-15T15:43:42.145Z" profile="204221589883977728"><h3 style="margin:8px 0;padding:0;font-weight:bold"><discord-custom-emoji name="📜" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4dc.svg"></discord-custom-emoji> Code Blocks<!-- --></h3><br/>Inline code<!-- -->: <!-- --><discord-inline-code>const x = 10;</discord-inline-code><br/><br/><discord-code-block language="js" code="// JavaScript Code Block
+function test() {
+  console.log(&quot;Hello World&quot;);
+}"></discord-code-block><br/><br/><discord-code-block language="python" code="# Python Code Block
+print(&quot;Hello World&quot;)"></discord-code-block><br/><br/><pre class="discord-code-block-pre discord-code-block-pre--multiline discord-ansi-code-block"><code class="discord-ansi-code"><span style="font-weight:700;color:#dc322f">Red Bold Text</span><span>
+</span><span style="color:#859900">Green Text</span><span>
+</span><span style="color:#268bd2">Blue Text</span></code></pre></discord-message><discord-message id="m-1494000300573327421" timestamp="2026-04-15T15:43:48.840Z" profile="204221589883977728"><h3 style="margin:8px 0;padding:0;font-weight:bold"><discord-custom-emoji name="📋" url="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f4cb.svg"></discord-custom-emoji> Lists<!-- --></h3><br/>* Item 1<!-- --><br/>* Item 2<!-- --><br/>  <!-- -->* Sub Item<!-- --></discord-message><div style="text-align:center;width:100%">Exported 24 messages.<!-- --> <span style="text-align:center">Powered by<!-- --> <a href="https://github.com/wickstudio/discord.js-html-transcript" style="color:lightblue">discord.js-html-transcript</a>.</span></div></discord-messages><script>document.addEventListener("click",e=>{const t=e.target;if(!(t instanceof Element))return;const o=t.closest(".discord-spoiler");o&&o.classList.contains("discord-spoiler")&&(o.classList.remove("discord-spoiler"),o.classList.add("discord-spoiler--revealed"))});</script><script>
+(() => {
+  const hostSelector = 'discord-message[profile], discord-reply[profile], discord-thread-message[profile], discord-command[profile]';
+  const rootSelector = 'discord-message, discord-reply, discord-thread-message, discord-command';
+
+  const getProfiles = () => window.$discordMessage?.profiles ?? {};
+  const getOwningHost = (element) => element.closest(rootSelector);
+
+  const getInjectedTag = (host) =>
+    Array.from(host.querySelectorAll('.discord-server-tag[data-transcript-server-tag="true"]')).find(
+      (element) => getOwningHost(element) === host
+    ) ?? null;
+
+  const getInjectedRoleIcon = (host) =>
+    Array.from(host.querySelectorAll('.discord-author-role-icon[data-transcript-role-icon="true"]')).find(
+      (element) => getOwningHost(element) === host
+    ) ?? null;
+
+  const getNativeRoleIcon = (host) =>
+    Array.from(host.querySelectorAll('.discord-author-role-icon')).find(
+      (element) => getOwningHost(element) === host && element.dataset.transcriptRoleIcon !== 'true'
+    ) ?? null;
+
+  const getUsernameElement = (host) => {
+    const usernameSelector =
+      host.tagName === 'DISCORD-MESSAGE' || host.tagName === 'DISCORD-THREAD-MESSAGE'
+        ? '.discord-author-username'
+        : '.discord-replied-message-username';
+
+    return Array.from(host.querySelectorAll(usernameSelector)).find((element) => getOwningHost(element) === host) ?? null;
+  };
+
+  const createServerTag = (tagText, badgeUrl, guildId) => {
+    const container = document.createElement('span');
+    container.className = 'discord-server-tag';
+    container.dataset.transcriptServerTag = 'true';
+    container.dataset.tag = tagText;
+    container.dataset.badge = badgeUrl ?? '';
+    container.title = 'Server Tag: ' + tagText;
+
+    if (guildId) {
+      container.dataset.guildId = guildId;
+    }
+
+    if (badgeUrl) {
+      const badge = document.createElement('img');
+      badge.className = 'discord-server-tag-badge';
+      badge.src = badgeUrl;
+      badge.alt = '';
+      badge.loading = 'lazy';
+      badge.decoding = 'async';
+      badge.draggable = false;
+      container.appendChild(badge);
+    }
+
+    const label = document.createElement('span');
+    label.className = 'discord-server-tag-text';
+    label.textContent = tagText;
+    container.appendChild(label);
+
+    return container;
+  };
+
+  const createRoleIcon = (iconUrl, roleName) => {
+    const icon = document.createElement('img');
+    icon.className = 'discord-author-role-icon';
+    icon.dataset.transcriptRoleIcon = 'true';
+    icon.src = iconUrl;
+    icon.alt = roleName || '';
+    icon.loading = 'lazy';
+    icon.decoding = 'async';
+    icon.draggable = false;
+
+    if (roleName) {
+      icon.title = roleName;
+    }
+
+    return icon;
+  };
+
+  const applyToHost = (host) => {
+    const profileId = host.getAttribute('profile');
+    if (!profileId) {
+      return;
+    }
+
+    const profile = getProfiles()[profileId];
+    const tagText = typeof profile?.serverTagText === 'string' ? profile.serverTagText.trim() : '';
+    const badgeUrl = typeof profile?.serverTagBadge === 'string' ? profile.serverTagBadge : '';
+    const guildId = typeof profile?.serverTagGuildId === 'string' ? profile.serverTagGuildId : '';
+    const existing = getInjectedTag(host);
+
+    if (!tagText) {
+      existing?.remove();
+      return;
+    }
+
+    const username = getUsernameElement(host);
+    if (!username) {
+      return;
+    }
+
+    if (existing?.dataset.tag === tagText && (existing.dataset.badge ?? '') === badgeUrl) {
+      return;
+    }
+
+    existing?.remove();
+    username.insertAdjacentElement('afterend', createServerTag(tagText, badgeUrl || undefined, guildId || undefined));
+  };
+
+  const applyRoleIconToHost = (host) => {
+    const profileId = host.getAttribute('profile');
+    if (!profileId) {
+      return;
+    }
+
+    const profile = getProfiles()[profileId];
+    const roleIcon = typeof profile?.roleIcon === 'string' ? profile.roleIcon : '';
+    const roleName = typeof profile?.roleName === 'string' ? profile.roleName : '';
+    const existing = getInjectedRoleIcon(host);
+    const nativeIcon = getNativeRoleIcon(host);
+
+    if (!roleIcon) {
+      existing?.remove();
+      return;
+    }
+
+    if (nativeIcon) {
+      if (nativeIcon.getAttribute('src') !== roleIcon) {
+        nativeIcon.setAttribute('src', roleIcon);
+      }
+
+      nativeIcon.setAttribute('alt', roleName);
+      if (roleName) {
+        nativeIcon.setAttribute('title', roleName);
+      }
+      return;
+    }
+
+    const username = getUsernameElement(host);
+    if (!username) {
+      return;
+    }
+
+    const anchor = getInjectedTag(host) ?? username;
+    if (existing) {
+      if (existing.getAttribute('src') !== roleIcon) {
+        existing.setAttribute('src', roleIcon);
+      }
+
+      existing.setAttribute('alt', roleName);
+      if (roleName) {
+        existing.setAttribute('title', roleName);
+      } else {
+        existing.removeAttribute('title');
+      }
+
+      if (existing.previousElementSibling !== anchor) {
+        anchor.insertAdjacentElement('afterend', existing);
+      }
+      return;
+    }
+
+    anchor.insertAdjacentElement('afterend', createRoleIcon(roleIcon, roleName));
+  };
+
+  const normalizeApplicationTags = () => {
+    document.querySelectorAll('.discord-application-tag').forEach((tag) => {
+      const label = Array.from(tag.childNodes)
+        .map((node) => node.textContent ?? '')
+        .join('')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toLowerCase();
+
+      if (label === 'bot') {
+        tag.setAttribute('data-transcript-app-tag-kind', 'bot');
+        return;
+      }
+
+      if (label === 'server') {
+        tag.setAttribute('data-transcript-app-tag-kind', 'server');
+        return;
+      }
+
+      tag.removeAttribute('data-transcript-app-tag-kind');
+    });
+  };
+
+  let scheduled = false;
+
+  const applyAll = () => {
+    document.querySelectorAll(hostSelector).forEach((host) => applyToHost(host));
+    document.querySelectorAll(hostSelector).forEach((host) => applyRoleIconToHost(host));
+    normalizeApplicationTags();
+  };
+
+  const schedule = () => {
+    if (scheduled) {
+      return;
+    }
+
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      applyAll();
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', schedule, { once: true });
+  } else {
+    schedule();
+  }
+
+  window.addEventListener('load', schedule);
+  new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script><script>
+(() => {
+  const overlay = document.createElement('div');
+  overlay.className = 'discord-image-preview-overlay';
+  overlay.innerHTML = `
+    <button type="button" class="discord-image-preview-close" aria-label="Close image preview">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M17.66 6.34a1 1 0 0 0-1.41 0L12 10.59 7.76 6.34a1 1 0 1 0-1.41 1.41L10.59 12l-4.24 4.24a1 1 0 1 0 1.41 1.41L12 13.41l4.24 4.24a1 1 0 0 0 1.41-1.41L13.41 12l4.24-4.24a1 1 0 0 0 0-1.41Z" />
+      </svg>
+    </button>
+    <div class="discord-image-preview-stage">
+      <img class="discord-image-preview-image" alt="" />
+    </div>
+  `;
+
+  const previewImage = overlay.querySelector('.discord-image-preview-image');
+  const closeButton = overlay.querySelector('.discord-image-preview-close');
+  const ignoredAncestors =
+    '.discord-image-preview-overlay, .discord-author-avatar, .discord-replied-message, .discord-button, .discord-select-menu-option, .discord-server-tag, .discord-thread-preview-message, .discord-poll-emoji, .discord-invite';
+  let previousOverflow = '';
+
+  const closePreview = () => {
+    overlay.classList.remove('is-open');
+    previewImage.removeAttribute('src');
+    previewImage.alt = '';
+    document.body.style.overflow = previousOverflow;
+  };
+
+  const openPreview = (src, alt) => {
+    if (!src) {
+      return;
+    }
+
+    previousOverflow = document.body.style.overflow;
+    previewImage.src = src;
+    previewImage.alt = alt || 'Image preview';
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const getPreviewCandidate = (target) => {
+    const attachment = target.closest('discord-attachment[type="image"]');
+    if (attachment) {
+      return {
+        src: attachment.getAttribute('url') || '',
+        alt: attachment.getAttribute('alt') || 'Image preview',
+      };
+    }
+
+    const image = target.closest('img');
+    if (!image) {
+      return null;
+    }
+
+    if (
+      image.classList.contains('discord-button-emoji') ||
+      image.classList.contains('discord-select-menu-option-emoji') ||
+      image.classList.contains('discord-server-tag-badge') ||
+      image.classList.contains('discord-author-role-icon') ||
+      image.closest(ignoredAncestors)
+    ) {
+      return null;
+    }
+
+    const src = image.currentSrc || image.getAttribute('src') || '';
+    if (!src) {
+      return null;
+    }
+
+    return {
+      src,
+      alt: image.getAttribute('alt') || 'Image preview',
+    };
+  };
+
+  document.addEventListener(
+    'click',
+    (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) {
+        return;
+      }
+
+      if (target === overlay || target.closest('.discord-image-preview-close')) {
+        event.preventDefault();
+        closePreview();
+        return;
+      }
+
+      const candidate = getPreviewCandidate(target);
+      if (!candidate) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+      openPreview(candidate.src, candidate.alt);
+    },
+    true
+  );
+
+  overlay.querySelector('.discord-image-preview-stage')?.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) {
+      closePreview();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && overlay.classList.contains('is-open')) {
+      closePreview();
+    }
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => document.body.appendChild(overlay), { once: true });
+  } else {
+    document.body.appendChild(overlay);
+  }
+})();
+</script><script>
+(() => {
+  const SEARCH_SELECTOR = 'discord-message[id^="m-"]';
+  const MATCH_CLASS = 'discord-search-match';
+  const ACTIVE_CLASS = 'discord-search-match--active';
+  const SHELL_CLASS = 'discord-transcript-search-shell';
+  const PANEL_CLASS = 'discord-transcript-search';
+  const OPEN_CLASS = 'is-open';
+
+  const normalize = (value) => value.toLowerCase().replace(/\s+/g, ' ').trim();
+
+  const extractMessageId = (value) => {
+    const trimmed = value.trim();
+    const directMatch = trimmed.match(/^(?:m-)?(\d{15,21})$/);
+    if (directMatch) {
+      return directMatch[1];
+    }
+
+    const linkMatch = trimmed.match(/\/(\d{15,21})(?:\/?(?:\?.*)?)?$/);
+    return linkMatch ? linkMatch[1] : null;
+  };
+
+  const getMessages = () =>
+    Array.from(document.querySelectorAll(SEARCH_SELECTOR))
+      .filter((element) => element instanceof HTMLElement)
+      .map((element) => ({
+        element,
+        id: (element.id || '').replace(/^m-/, ''),
+        text: normalize(element.textContent || ''),
+      }));
+
+  const shell = document.createElement('div');
+  shell.className = SHELL_CLASS;
+  shell.innerHTML =
+    '<button class="discord-transcript-search-toggle" type="button" aria-label="Toggle transcript search" aria-expanded="false">' +
+    '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 1 1 0 16a8 8 0 0 1 0-16Zm0 2a6 6 0 1 0 0 12a6 6 0 0 0 0-12Zm11.71 15.29a1 1 0 0 1 0 1.42a1 1 0 0 1-1.42 0l-3.4-3.39a1 1 0 0 1 1.42-1.42l3.4 3.39Z"/></svg>' +
+    '</button>' +
+    '<div class="' +
+    PANEL_CLASS +
+    '" role="search" aria-hidden="true">' +
+    '<label class="discord-transcript-search-bar">' +
+    '<input class="discord-transcript-search-input" type="search" aria-label="Search transcript messages" />' +
+    '<button class="discord-transcript-search-submit" type="button" data-action="next" aria-label="Search transcript">' +
+    '<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 1 1 0 16a8 8 0 0 1 0-16Zm0 2a6 6 0 1 0 0 12a6 6 0 0 0 0-12Zm11.71 15.29a1 1 0 0 1 0 1.42a1 1 0 0 1-1.42 0l-3.4-3.39a1 1 0 0 1 1.42-1.42l3.4 3.39Z"/></svg>' +
+    '</button>' +
+    '</label>' +
+    '<div class="discord-transcript-search-meta">' +
+    '<span class="discord-transcript-search-count" aria-live="polite">Ready</span>' +
+    '<div class="discord-transcript-search-actions">' +
+    '<button class="discord-transcript-search-button" type="button" data-action="prev" aria-label="Previous match">↑</button>' +
+    '<button class="discord-transcript-search-button" type="button" data-action="next" aria-label="Next match">↓</button>' +
+    '<button class="discord-transcript-search-button discord-transcript-search-button--ghost" type="button" data-action="clear" aria-label="Clear search">✕</button>' +
+    '</div>' +
+    '</div>' +
+    '</div>';
+
+  const desktopMedia = window.matchMedia('(min-width: 901px)');
+  const panel = shell.querySelector('.discord-transcript-search');
+  const toggleButton = shell.querySelector('.discord-transcript-search-toggle');
+  const input = shell.querySelector('.discord-transcript-search-input');
+  const count = shell.querySelector('.discord-transcript-search-count');
+  const previousButton = shell.querySelector('[data-action="prev"]');
+  const nextButton = shell.querySelectorAll('[data-action="next"]')[1];
+  const submitButton = shell.querySelector('.discord-transcript-search-submit');
+  const clearButton = shell.querySelector('[data-action="clear"]');
+  const headerChannel =
+    document.querySelector('.discord-transcript-header-bar')?.getAttribute('data-channel-name') ||
+    document.querySelector('discord-header')?.getAttribute('channel') ||
+    document.title ||
+    'transcript';
+
+  let matches = [];
+  let activeIndex = -1;
+  let scheduled = false;
+  let hasUserToggled = false;
+
+  input.placeholder = 'Search ' + headerChannel;
+
+  const setOpen = (next, focus = false) => {
+    shell.classList.toggle(OPEN_CLASS, next);
+    toggleButton.setAttribute('aria-expanded', String(next));
+    panel.setAttribute('aria-hidden', String(!next));
+
+    if (focus && next) {
+      requestAnimationFrame(() => {
+        input.focus();
+        input.select();
+      });
+    }
+
+    if (!next) {
+      input.blur();
+    }
+  };
+
+  const syncDefaultVisibility = (force = false) => {
+    if (!force && hasUserToggled) {
+      return;
+    }
+
+    setOpen(desktopMedia.matches, false);
+  };
+
+  const clearHighlights = () => {
+    document.querySelectorAll(SEARCH_SELECTOR + '.' + MATCH_CLASS).forEach((message) => {
+      message.classList.remove(MATCH_CLASS, ACTIVE_CLASS);
+    });
+  };
+
+  const updateControls = () => {
+    const total = matches.length;
+    const query = (input.value || '').trim();
+    panel.classList.toggle('has-query', Boolean(query));
+    count.textContent =
+      !query ? 'Ready' : total > 0 && activeIndex >= 0 ? activeIndex + 1 + ' of ' + total : 'No matches';
+    previousButton.disabled = total === 0;
+    nextButton.disabled = total === 0;
+    clearButton.disabled = !(input.value || '').trim();
+  };
+
+  const focusMatch = (index, scroll = true) => {
+    if (matches.length === 0) {
+      activeIndex = -1;
+      updateControls();
+      return;
+    }
+
+    if (activeIndex >= 0 && matches[activeIndex]) {
+      matches[activeIndex].element.classList.remove(ACTIVE_CLASS);
+    }
+
+    activeIndex = ((index % matches.length) + matches.length) % matches.length;
+    const match = matches[activeIndex];
+    match.element.classList.add(ACTIVE_CLASS);
+
+    if (scroll) {
+      match.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    updateControls();
+  };
+
+  const runSearch = (scroll = true) => {
+    clearHighlights();
+    matches = [];
+    activeIndex = -1;
+
+    const rawQuery = (input.value || '').trim();
+    if (!rawQuery) {
+      updateControls();
+      return;
+    }
+
+    const normalizedQuery = normalize(rawQuery.replace(/^m-/, ''));
+    const exactMessageId = extractMessageId(rawQuery);
+    const availableMessages = getMessages();
+
+    matches = availableMessages.filter((message) => {
+      if (exactMessageId) {
+        return message.id === exactMessageId;
+      }
+
+      return message.id.includes(normalizedQuery) || message.text.includes(normalizedQuery);
+    });
+
+    matches.forEach((match) => match.element.classList.add(MATCH_CLASS));
+    focusMatch(0, scroll);
+  };
+
+  const scheduleSearchRefresh = () => {
+    if (scheduled || !(input.value || '').trim()) {
+      return;
+    }
+
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      runSearch(false);
+    });
+  };
+
+  input.addEventListener('input', () => runSearch(false));
+  input.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      if (matches.length > 0) {
+        focusMatch(activeIndex + (event.shiftKey ? -1 : 1));
+      } else {
+        runSearch();
+      }
+      return;
+    }
+
+    if (event.key === 'Escape') {
+      if ((input.value || '').trim()) {
+        input.value = '';
+        runSearch(false);
+      } else {
+        setOpen(false, false);
+      }
+    }
+  });
+
+  toggleButton.addEventListener('click', () => {
+    hasUserToggled = true;
+    setOpen(!shell.classList.contains(OPEN_CLASS), !shell.classList.contains(OPEN_CLASS));
+  });
+
+  previousButton.addEventListener('click', () => focusMatch(activeIndex - 1));
+  nextButton.addEventListener('click', () => {
+    if (matches.length > 0) {
+      focusMatch(activeIndex + 1);
+      return;
+    }
+
+    runSearch();
+  });
+  submitButton.addEventListener('click', () => {
+    if (matches.length > 0) {
+      focusMatch(activeIndex + 1);
+      return;
+    }
+
+    runSearch();
+  });
+  clearButton.addEventListener('click', () => {
+    input.value = '';
+    runSearch(false);
+    input.focus();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    const isFindShortcut = (event.ctrlKey || event.metaKey) && !event.altKey && !event.shiftKey && event.key.toLowerCase() === 'f';
+    if (!isFindShortcut) {
+      return;
+    }
+
+    event.preventDefault();
+    setOpen(true, true);
+  });
+
+  document.addEventListener(
+    'pointerdown',
+    (event) => {
+      const target = event.target;
+      if (!(target instanceof Element) || desktopMedia.matches || !shell.classList.contains(OPEN_CLASS)) {
+        return;
+      }
+
+      if (!shell.contains(target)) {
+        setOpen(false, false);
+      }
+    },
+    true
+  );
+
+  desktopMedia.addEventListener('change', () => syncDefaultVisibility(false));
+
+  const mount = () => {
+    const mountTarget = document.querySelector('.discord-transcript-header-search-slot') || document.body;
+
+    if (!mountTarget.contains(shell)) {
+      mountTarget.appendChild(shell);
+      syncDefaultVisibility(true);
+      updateControls();
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mount, { once: true });
+  } else {
+    mount();
+  }
+
+  const transcriptRoot = document.querySelector('discord-messages');
+  if (transcriptRoot) {
+    new MutationObserver(scheduleSearchRefresh).observe(transcriptRoot, { childList: true, subtree: true });
+  }
+})();
+</script><script>setTimeout(()=>{document.querySelectorAll(".discord-embed-wrapper").forEach(e=>{e.style.border="1px solid rgba(255, 255, 255, 0.06)";e.style.borderRadius="4px"});},500);setTimeout(()=>{document.querySelectorAll(".discord-embed-wrapper").forEach(e=>{e.style.border="1px solid rgba(255, 255, 255, 0.06)";e.style.borderRadius="4px"});},2000);</script></body></html>

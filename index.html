@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>discord.js-html-transcript - Documentation</title>
+  <meta name="description" content="Generate beautiful, pixel-perfect Discord HTML transcripts with full support for modern Discord UI." />
+  <meta name="theme-color" content="#5865F2" />
+  <link rel="icon" type="image/png" href="./assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-left">
+      <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="#" class="brand">
+        <img src="./assets/logo.png" alt="discord.js-html-transcript" class="brand-logo" />
+      </a>
+      <span class="version-badge">v4.0.0</span>
+    </div>
+    <div class="navbar-right">
+      <a href="https://discord.gg/wicks" target="_blank" rel="noopener" class="nav-icon-link" title="Discord">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03Z"/></svg>
+      </a>
+      <a href="https://www.npmjs.com/package/discord.js-html-transcript" target="_blank" rel="noopener" class="nav-icon-link" title="NPM">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323h13.74v13.354H16.2V8.014h-3.386v10.663h-7.68z"/></svg>
+      </a>
+      <a href="https://github.com/wickstudio/discord.js-html-transcript" target="_blank" rel="noopener" class="nav-icon-link" title="GitHub">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Left Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar-nav">
+        <ul class="nav-group">
+          <li class="nav-title">Getting Started</li>
+          <li><a href="#introduction" class="nav-link active">Introduction</a></li>
+          <li><a href="#installation" class="nav-link">Installation</a></li>
+          <li><a href="#quick-start" class="nav-link">Quick Start</a></li>
+        </ul>
+        <ul class="nav-group">
+          <li class="nav-title">API Reference</li>
+          <li><a href="#createtranscript" class="nav-link">createTranscript()</a></li>
+          <li><a href="#generatefrommessages" class="nav-link">generateFromMessages()</a></li>
+          <li><a href="#options" class="nav-link">Options</a></li>
+          <li><a href="#features" class="nav-link">Feature Toggles</a></li>
+          <li><a href="#assets" class="nav-link">Asset Preservation</a></li>
+          <li><a href="#compression" class="nav-link">Image Compression</a></li>
+          <li><a href="#callbacks" class="nav-link">Callbacks</a></li>
+        </ul>
+        <ul class="nav-group">
+          <li class="nav-title">Showcase</li>
+          <li><a href="#showcase" class="nav-link">UI Previews</a></li>
+          <li><a href="#live-demo" class="nav-link">Live Demo</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Sidebar overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-wrapper">
+
+        <!-- ═══ Introduction ═══ -->
+        <section id="introduction" class="docs-section">
+          <div class="hero-block">
+            <img src="./assets/logo.png" alt="discord.js-html-transcript" class="hero-logo" />
+            <h1 class="hero-title">discord.js-html-transcript</h1>
+            <p class="hero-subtitle">The most advanced library for generating beautiful, pixel-perfect Discord chat HTML transcripts with full modern UI support.</p>
+            <div class="hero-badges">
+              <img src="https://img.shields.io/npm/v/discord.js-html-transcript?color=5865F2&label=npm&logo=npm&logoColor=white" alt="npm version" />
+              <img src="https://img.shields.io/npm/dw/discord.js-html-transcript?color=5865F2&logo=npm&logoColor=white" alt="downloads" />
+              <img src="https://img.shields.io/discord/1061971978845700176?color=5865F2&label=discord&logo=discord&logoColor=white" alt="discord" />
+            </div>
+            <div class="hero-actions">
+              <a href="#installation" class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+                Get Started
+              </a>
+              <a href="#live-demo" class="btn btn-ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                View Demo
+              </a>
+            </div>
+          </div>
+
+          <div class="feature-strip">
+            <div class="feature-chip"><span class="chip-icon">🔀</span> Forwarded Messages</div>
+            <div class="feature-chip"><span class="chip-icon">🎙️</span> Voice Messages</div>
+            <div class="feature-chip"><span class="chip-icon">📊</span> Polls</div>
+            <div class="feature-chip"><span class="chip-icon">🏷️</span> Server Tags</div>
+            <div class="feature-chip"><span class="chip-icon">🔘</span> Buttons & Menus</div>
+            <div class="feature-chip"><span class="chip-icon">🔗</span> Invite Previews</div>
+            <div class="feature-chip"><span class="chip-icon">🖼️</span> Image Lightbox</div>
+            <div class="feature-chip"><span class="chip-icon">🔍</span> Message Search</div>
+            <div class="feature-chip"><span class="chip-icon">🧵</span> Thread Previews</div>
+            <div class="feature-chip"><span class="chip-icon">🎨</span> ANSI Blocks</div>
+            <div class="feature-chip"><span class="chip-icon">📱</span> Responsive</div>
+            <div class="feature-chip"><span class="chip-icon">💾</span> Asset Saving</div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-icon">💡</div>
+            <div class="info-body">
+              <strong>Why this library?</strong>
+              <p>Unlike other transcript packages that dump text into basic HTML, this library perfectly renders the native Discord UI - every button, embed, poll, voice message, and thread is pixel-perfect. The output is a standalone HTML file that works offline.</p>
+            </div>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Installation ═══ -->
+        <section id="installation" class="docs-section">
+          <h2>Installation</h2>
+          <p>Install with your preferred package manager. Requires <strong>Node.js 16+</strong> and <strong>discord.js v14 or v15</strong>.</p>
+
+          <div class="code-block">
+            <div class="code-header">
+              <div class="code-tabs">
+                <button class="code-tab active" data-target="install-npm">npm</button>
+                <button class="code-tab" data-target="install-pnpm">pnpm</button>
+                <button class="code-tab" data-target="install-yarn">yarn</button>
+              </div>
+              <button class="copy-btn" aria-label="Copy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+<pre class="code-pane active" id="install-npm"><code>npm install discord.js-html-transcript</code></pre>
+<pre class="code-pane" id="install-pnpm"><code>pnpm add discord.js-html-transcript</code></pre>
+<pre class="code-pane" id="install-yarn"><code>yarn add discord.js-html-transcript</code></pre>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Quick Start ═══ -->
+        <section id="quick-start" class="docs-section">
+          <h2>Quick Start</h2>
+          <p>The simplest way to generate a transcript and send it in a channel.</p>
+
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-filename">bot.js</span>
+              <button class="copy-btn" aria-label="Copy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy</span>
+              </button>
+            </div>
+<pre><code><span class="kw">const</span> discordTranscripts = <span class="fn">require</span>(<span class="s">'discord.js-html-transcript'</span>);
+
+client.<span class="fn">on</span>(<span class="s">'interactionCreate'</span>, <span class="kw">async</span> (interaction) =&gt; {
+  <span class="kw">if</span> (!interaction.isChatInputCommand() || interaction.commandName !== <span class="s">'transcript'</span>) <span class="kw">return</span>;
+
+  <span class="kw">const</span> transcript = <span class="kw">await</span> discordTranscripts.<span class="fn">createTranscript</span>(interaction.channel, {
+    <span class="p">returnType</span>: <span class="s">'attachment'</span>,
+    <span class="p">filename</span>: <span class="s">`transcript-${interaction.channel.id}.html`</span>,
+    <span class="p">limit</span>: <span class="n">-1</span>,
+    <span class="p">poweredBy</span>: <span class="kw">true</span>,
+  });
+
+  <span class="kw">await</span> interaction.<span class="fn">reply</span>({
+    <span class="p">content</span>: <span class="s">'Here is the transcript!'</span>,
+    <span class="p">files</span>: [transcript],
+  });
+});</code></pre>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ createTranscript ═══ -->
+        <section id="createtranscript" class="docs-section">
+          <h2>createTranscript(channel, options?)</h2>
+          <div class="fn-badge">Async</div>
+          <p>Fetches all messages from a Discord channel and returns the rendered HTML transcript. This is the primary function for most use cases.</p>
+
+          <h3>Parameters</h3>
+          <table class="api-table">
+            <thead><tr><th>Parameter</th><th>Type</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>channel</code></td><td><code>TextBasedChannel</code></td><td>The Discord channel to generate the transcript from.</td></tr>
+              <tr><td><code>options</code></td><td><code>CreateTranscriptOptions</code></td><td>Optional configuration object. See <a href="#options">Options</a> below.</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Returns</h3>
+          <p>Depending on <code>returnType</code>: an <code>AttachmentBuilder</code>, <code>Buffer</code>, or <code>string</code>.</p>
+
+          <h3>Example</h3>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-filename">transcript.js</span>
+              <button class="copy-btn" aria-label="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Copy</span></button>
+            </div>
+<pre><code><span class="kw">const</span> { createTranscript, ExportReturnType } = <span class="fn">require</span>(<span class="s">'discord.js-html-transcript'</span>);
+
+<span class="cm">// Generate as an AttachmentBuilder (default)</span>
+<span class="kw">const</span> attachment = <span class="kw">await</span> <span class="fn">createTranscript</span>(channel, {
+  <span class="p">returnType</span>: ExportReturnType.Attachment,
+  <span class="p">filename</span>: <span class="s">'transcript.html'</span>,
+  <span class="p">limit</span>: <span class="n">-1</span>,
+});
+
+<span class="cm">// Generate as a raw HTML string</span>
+<span class="kw">const</span> html = <span class="kw">await</span> <span class="fn">createTranscript</span>(channel, {
+  <span class="p">returnType</span>: ExportReturnType.String,
+});
+
+<span class="cm">// Generate as a Buffer</span>
+<span class="kw">const</span> buffer = <span class="kw">await</span> <span class="fn">createTranscript</span>(channel, {
+  <span class="p">returnType</span>: ExportReturnType.Buffer,
+});</code></pre>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ generateFromMessages ═══ -->
+        <section id="generatefrommessages" class="docs-section">
+          <h2>generateFromMessages(messages, channel, options?)</h2>
+          <div class="fn-badge">Async</div>
+          <p>Generates a transcript from a pre-fetched array or <code>Collection</code> of messages. Use this when you want full control over which messages to include.</p>
+
+          <div class="info-box info-warning">
+            <div class="info-icon">⚠️</div>
+            <div class="info-body">
+              <strong>Message Ordering</strong>
+              <p>Messages should be passed in chronological order (oldest first). The library does <strong>not</strong> sort them automatically.</p>
+            </div>
+          </div>
+
+          <h3>Parameters</h3>
+          <table class="api-table">
+            <thead><tr><th>Parameter</th><th>Type</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>messages</code></td><td><code>Message[] | Collection</code></td><td>Array or Collection of messages to render.</td></tr>
+              <tr><td><code>channel</code></td><td><code>Channel</code></td><td>The channel these messages belong to (used for header info).</td></tr>
+              <tr><td><code>options</code></td><td><code>GenerateFromMessagesOptions</code></td><td>Optional configuration object.</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Example</h3>
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-filename">partial.js</span>
+              <button class="copy-btn" aria-label="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Copy</span></button>
+            </div>
+<pre><code><span class="kw">const</span> messages = <span class="kw">await</span> channel.messages.<span class="fn">fetch</span>({ <span class="p">limit</span>: <span class="n">50</span> });
+
+<span class="kw">const</span> transcript = <span class="kw">await</span> discordTranscripts.<span class="fn">generateFromMessages</span>(
+  messages,
+  channel,
+  {
+    <span class="p">returnType</span>: <span class="s">'attachment'</span>,
+    <span class="p">filename</span>: <span class="s">'partial-transcript.html'</span>,
+  }
+);
+
+<span class="kw">await</span> channel.<span class="fn">send</span>({ <span class="p">files</span>: [transcript] });</code></pre>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Options ═══ -->
+        <section id="options" class="docs-section">
+          <h2>Options</h2>
+          <p>Both <code>createTranscript</code> and <code>generateFromMessages</code> accept an options object. All fields are optional.</p>
+
+          <table class="api-table">
+            <thead><tr><th>Option</th><th>Type</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>returnType</code></td><td><code>'attachment' | 'buffer' | 'string'</code></td><td><code>'attachment'</code></td><td>The output format of the generated transcript.</td></tr>
+              <tr><td><code>filename</code></td><td><code>string</code></td><td><code>'transcript-{id}.html'</code></td><td>The name of the file if returning an attachment.</td></tr>
+              <tr><td><code>limit</code></td><td><code>number</code></td><td><code>-1</code></td><td>Max messages to fetch. <code>-1</code> fetches all messages. (<code>createTranscript</code> only)</td></tr>
+              <tr><td><code>filter</code></td><td><code>(msg) =&gt; boolean</code></td><td><code>undefined</code></td><td>Filter function evaluated per message. (<code>createTranscript</code> only)</td></tr>
+              <tr><td><code>saveImages</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Downloads images and encodes them as base64 data URIs.</td></tr>
+              <tr><td><code>saveAssets</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Downloads all supported assets as base64 data URIs.</td></tr>
+              <tr><td><code>assets</code></td><td><code>object</code></td><td><code>{}</code></td><td>Fine-grained asset preservation. See <a href="#assets">Asset Preservation</a>.</td></tr>
+              <tr><td><code>features</code></td><td><code>object</code></td><td><code>{}</code></td><td>Toggle UI features. See <a href="#features">Feature Toggles</a>.</td></tr>
+              <tr><td><code>callbacks</code></td><td><code>object</code></td><td><code>{}</code></td><td>Custom resolver callbacks. See <a href="#callbacks">Callbacks</a>.</td></tr>
+              <tr><td><code>poweredBy</code></td><td><code>boolean</code></td><td><code>true</code></td><td>Whether to show the "Powered by" footer.</td></tr>
+              <tr><td><code>footerText</code></td><td><code>string</code></td><td><code>'Exported {number} message{s}.'</code></td><td>Custom footer text. <code>{number}</code> and <code>{s}</code> are placeholders.</td></tr>
+              <tr><td><code>favicon</code></td><td><code>'guild' | string</code></td><td><code>'guild'</code></td><td>Set to <code>'guild'</code> to use the server icon, or pass a custom URL.</td></tr>
+              <tr><td><code>hydrate</code></td><td><code>boolean</code></td><td><code>false</code></td><td>Whether to provide React hydration props in the output HTML.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Feature Toggles ═══ -->
+        <section id="features" class="docs-section">
+          <h2>Feature Toggles</h2>
+          <p>Control which interactive features are injected into the transcript via <code>options.features</code>. All features default to <strong>enabled</strong>.</p>
+
+          <table class="api-table">
+            <thead><tr><th>Feature</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>search</code></td><td><code>true</code></td><td>Built-in message search bar with keyboard shortcuts (Ctrl+F).</td></tr>
+              <tr><td><code>imagePreview</code></td><td><code>true</code></td><td>Click any image to open a fullscreen lightbox overlay.</td></tr>
+              <tr><td><code>spoilerReveal</code></td><td><code>true</code></td><td>Click on spoiler tags to reveal hidden content.</td></tr>
+              <tr><td><code>messageLinks</code></td><td><code>true</code></td><td>Click a reply reference to smooth-scroll to the original message.</td></tr>
+              <tr><td><code>profileBadges</code></td><td><code>true</code></td><td>Render APP badges, server tags, and role icons next to usernames.</td></tr>
+              <tr><td><code>embedTweaks</code></td><td><code>true</code></td><td>Client-side CSS fixes for embed borders and styling.</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Example</h3>
+          <div class="code-block">
+            <div class="code-header"><span class="code-filename">features.js</span><button class="copy-btn" aria-label="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Copy</span></button></div>
+<pre><code><span class="kw">const</span> transcript = <span class="kw">await</span> <span class="fn">createTranscript</span>(channel, {
+  <span class="p">features</span>: {
+    <span class="p">search</span>: <span class="kw">true</span>,
+    <span class="p">imagePreview</span>: <span class="kw">true</span>,
+    <span class="p">spoilerReveal</span>: <span class="kw">true</span>,
+    <span class="p">messageLinks</span>: <span class="kw">true</span>,
+    <span class="p">profileBadges</span>: <span class="kw">true</span>,
+    <span class="p">embedTweaks</span>: <span class="kw">false</span>,  <span class="cm">// disable embed style fixes</span>
+  },
+});</code></pre>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Asset Preservation ═══ -->
+        <section id="assets" class="docs-section">
+          <h2>Asset Preservation</h2>
+          <p>By default, transcripts reference remote Discord CDN URLs for images and avatars. These URLs expire over time. Use <code>options.assets</code> to embed specific asset types directly into the HTML as base64 data URIs for permanent offline access.</p>
+
+          <table class="api-table">
+            <thead><tr><th>Asset</th><th>Default</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>attachments</code></td><td><code>false</code></td><td>User-uploaded images, videos, audio, and file attachments.</td></tr>
+              <tr><td><code>embeds</code></td><td><code>false</code></td><td>Embed images, thumbnails, video posters, and author/footer icons.</td></tr>
+              <tr><td><code>components</code></td><td><code>false</code></td><td>Media gallery items, thumbnails, and file components.</td></tr>
+              <tr><td><code>avatars</code></td><td><code>false</code></td><td>User profile pictures used throughout the transcript.</td></tr>
+              <tr><td><code>emojis</code></td><td><code>false</code></td><td>Custom Discord emojis and standard Twemoji images.</td></tr>
+              <tr><td><code>guildIcons</code></td><td><code>false</code></td><td>Server icon shown in the transcript header/favicon.</td></tr>
+              <tr><td><code>inviteIcons</code></td><td><code>false</code></td><td>Server icons inside invite link preview cards.</td></tr>
+              <tr><td><code>roleIcons</code></td><td><code>false</code></td><td>Highest-role icon images displayed next to usernames.</td></tr>
+              <tr><td><code>serverTagBadges</code></td><td><code>false</code></td><td>Badge images shown inside server tag labels.</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Example - Full Offline Transcript</h3>
+          <div class="code-block">
+            <div class="code-header"><span class="code-filename">offline.js</span><button class="copy-btn" aria-label="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Copy</span></button></div>
+<pre><code><span class="kw">const</span> { createTranscript, TranscriptAssetDownloader } = <span class="fn">require</span>(<span class="s">'discord.js-html-transcript'</span>);
+
+<span class="kw">const</span> transcript = <span class="kw">await</span> <span class="fn">createTranscript</span>(channel, {
+  <span class="p">assets</span>: {
+    <span class="p">attachments</span>: <span class="kw">true</span>,
+    <span class="p">embeds</span>: <span class="kw">true</span>,
+    <span class="p">avatars</span>: <span class="kw">true</span>,
+    <span class="p">emojis</span>: <span class="kw">true</span>,
+    <span class="p">guildIcons</span>: <span class="kw">true</span>,
+    <span class="p">inviteIcons</span>: <span class="kw">true</span>,
+    <span class="p">roleIcons</span>: <span class="kw">true</span>,
+    <span class="p">serverTagBadges</span>: <span class="kw">true</span>,
+  },
+  <span class="p">callbacks</span>: {
+    <span class="p">resolveAssetSrc</span>: <span class="kw">new</span> <span class="tp">TranscriptAssetDownloader</span>()
+      .<span class="fn">withMaxSize</span>(<span class="n">10240</span>)
+      .<span class="fn">build</span>(),
+  },
+});</code></pre>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Image Compression ═══ -->
+        <section id="compression" class="docs-section">
+          <h2>Image Compression</h2>
+          <p>When saving assets, file sizes can grow significantly. Use the <code>TranscriptImageDownloader</code> class with <strong>sharp</strong> to automatically resize and compress images to WebP before embedding.</p>
+
+          <div class="info-box info-warning">
+            <div class="info-icon">📦</div>
+            <div class="info-body">
+              <strong>Dependency Required</strong>
+              <p>You must install <code>sharp</code> separately: <code>npm install sharp</code></p>
+            </div>
+          </div>
+
+          <h3>TranscriptImageDownloader</h3>
+          <table class="api-table">
+            <thead><tr><th>Method</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>.withMaxSize(kb)</code></td><td>Skip images larger than this size in kilobytes.</td></tr>
+              <tr><td><code>.withCompression(quality, webp?)</code></td><td>Set compression quality (1-100) and optionally force WebP conversion.</td></tr>
+              <tr><td><code>.build()</code></td><td>Returns the <code>resolveImageSrc</code> callback function.</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Example</h3>
+          <div class="code-block">
+            <div class="code-header"><span class="code-filename">compressed.js</span><button class="copy-btn" aria-label="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Copy</span></button></div>
+<pre><code><span class="kw">const</span> { TranscriptImageDownloader } = <span class="fn">require</span>(<span class="s">'discord.js-html-transcript'</span>);
+
+<span class="kw">const</span> transcript = <span class="kw">await</span> <span class="fn">createTranscript</span>(channel, {
+  <span class="p">callbacks</span>: {
+    <span class="p">resolveImageSrc</span>: <span class="kw">new</span> <span class="tp">TranscriptImageDownloader</span>()
+      .<span class="fn">withMaxSize</span>(<span class="n">5120</span>)           <span class="cm">// Skip images &gt; 5MB</span>
+      .<span class="fn">withCompression</span>(<span class="n">40</span>, <span class="kw">true</span>)  <span class="cm">// 40% quality, force WebP</span>
+      .<span class="fn">build</span>(),
+  },
+});</code></pre>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Callbacks ═══ -->
+        <section id="callbacks" class="docs-section">
+          <h2>Callbacks</h2>
+          <p>Override how channels, users, roles, invites, and assets are resolved via <code>options.callbacks</code>.</p>
+
+          <table class="api-table">
+            <thead><tr><th>Callback</th><th>Signature</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td><code>resolveChannel</code></td><td><code>(id: string) =&gt; Channel | null</code></td><td>Resolve a channel mention by ID.</td></tr>
+              <tr><td><code>resolveUser</code></td><td><code>(id: string) =&gt; User | null</code></td><td>Resolve a user mention by ID.</td></tr>
+              <tr><td><code>resolveRole</code></td><td><code>(id: string) =&gt; Role | null</code></td><td>Resolve a role mention by ID.</td></tr>
+              <tr><td><code>resolveInvite</code></td><td><code>(code: string) =&gt; InviteData | null</code></td><td>Resolve a Discord invite code into rich preview data.</td></tr>
+              <tr><td><code>resolveImageSrc</code></td><td><code>(attachment) =&gt; string | null</code></td><td>Custom image resolver (e.g. <code>TranscriptImageDownloader</code>).</td></tr>
+              <tr><td><code>resolveAssetSrc</code></td><td><code>(asset) =&gt; string | null</code></td><td>Custom asset resolver (e.g. <code>TranscriptAssetDownloader</code>).</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Example - Custom Invite Resolver</h3>
+          <div class="code-block">
+            <div class="code-header"><span class="code-filename">callbacks.js</span><button class="copy-btn" aria-label="Copy"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Copy</span></button></div>
+<pre><code><span class="kw">const</span> transcript = <span class="kw">await</span> <span class="fn">createTranscript</span>(channel, {
+  <span class="p">callbacks</span>: {
+    <span class="p">resolveInvite</span>: <span class="kw">async</span> (code) =&gt; {
+      <span class="kw">const</span> invite = <span class="kw">await</span> client.<span class="fn">fetchInvite</span>(code).<span class="fn">catch</span>(() =&gt; <span class="kw">null</span>);
+      <span class="kw">if</span> (!invite?.guild) <span class="kw">return null</span>;
+
+      <span class="kw">return</span> {
+        <span class="p">name</span>: invite.guild.name,
+        <span class="p">icon</span>: invite.guild.<span class="fn">iconURL</span>({ <span class="p">size</span>: <span class="n">128</span> }),
+        <span class="p">online</span>: invite.presenceCount ?? <span class="n">0</span>,
+        <span class="p">members</span>: invite.memberCount ?? <span class="n">0</span>,
+      };
+    },
+  },
+});</code></pre>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Showcase ═══ -->
+        <section id="showcase" class="docs-section">
+          <h2>UI Previews</h2>
+          <p>Click any image to zoom in. Every element is rendered to match the native Discord UI.</p>
+
+          <div class="showcase-grid">
+            <div class="showcase-card"><img src="./assets/image-attachment.png" alt="Image Attachment" loading="lazy"><span>Image Attachment</span></div>
+            <div class="showcase-card"><img src="./assets/multi-image.png" alt="Multi Image" loading="lazy"><span>Multi-Image Gallery</span></div>
+            <div class="showcase-card"><img src="./assets/file-attachment.png" alt="File" loading="lazy"><span>File Attachment</span></div>
+            <div class="showcase-card"><img src="./assets/buttons-select.png" alt="Buttons" loading="lazy"><span>Buttons & Select Menu</span></div>
+            <div class="showcase-card"><img src="./assets/slash-voice.png" alt="Slash & Voice" loading="lazy"><span>Slash Command & Voice Message</span></div>
+            <div class="showcase-card"><img src="./assets/invite-preview.png" alt="Invite" loading="lazy"><span>Invite Link Preview</span></div>
+            <div class="showcase-card"><img src="./assets/embed-rich.png" alt="Embed" loading="lazy"><span>Rich Embed</span></div>
+            <div class="showcase-card"><img src="./assets/embed-fields.png" alt="Embed Fields" loading="lazy"><span>Embed with Fields</span></div>
+            <div class="showcase-card"><img src="./assets/embed-image.png" alt="Embed Image" loading="lazy"><span>Embed with Image</span></div>
+            <div class="showcase-card"><img src="./assets/forwarded.png" alt="Forwarded" loading="lazy"><span>Forwarded Message</span></div>
+            <div class="showcase-card"><img src="./assets/forwarded-reactions.png" alt="Forwarded Reactions" loading="lazy"><span>Forwarded + Reactions</span></div>
+            <div class="showcase-card"><img src="./assets/poll.png" alt="Poll" loading="lazy"><span>Poll / Voting</span></div>
+            <div class="showcase-card"><img src="./assets/thread.png" alt="Thread" loading="lazy"><span>Thread Preview</span></div>
+            <div class="showcase-card"><img src="./assets/mentions.png" alt="Mentions" loading="lazy"><span>Mentions</span></div>
+            <div class="showcase-card"><img src="./assets/links.png" alt="Links" loading="lazy"><span>Links</span></div>
+            <div class="showcase-card"><img src="./assets/markdown-basic.png" alt="Markdown" loading="lazy"><span>Markdown Formatting</span></div>
+            <div class="showcase-card"><img src="./assets/markdown-code.png" alt="Code Blocks" loading="lazy"><span>Code Blocks</span></div>
+            <div class="showcase-card"><img src="./assets/markdown-heading.png" alt="Headings" loading="lazy"><span>Headings</span></div>
+            <div class="showcase-card"><img src="./assets/markdown-quote.png" alt="Quotes" loading="lazy"><span>Block Quotes</span></div>
+            <div class="showcase-card"><img src="./assets/markdown-lists.png" alt="Lists" loading="lazy"><span>Lists</span></div>
+            <div class="showcase-card"><img src="./assets/markdown-ansi.png" alt="ANSI" loading="lazy"><span>ANSI Code Blocks</span></div>
+          </div>
+        </section>
+
+        <hr />
+
+        <!-- ═══ Live Demo ═══ -->
+        <section id="live-demo" class="docs-section">
+          <h2>Live Demo</h2>
+          <p>A real transcript rendered live inside the browser.</p>
+
+          <div class="browser-frame">
+            <div class="browser-chrome">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">demo.html</div>
+              <a href="demo.html" target="_blank" rel="noopener" class="browser-external" title="Open in new tab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+            <div class="browser-body">
+              <iframe src="demo.html" class="demo-iframe" title="Live transcript demo"></iframe>
+              <div class="demo-fallback" id="demoFallback">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.3;margin-bottom:16px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <h3>Demo Not Found</h3>
+                <p>Place your generated <code>demo.html</code> transcript file in the <code>/site</code> directory to see it live here.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="docs-footer">
+        <div class="footer-inner">
+          <p>&copy; 2024-2026 <a href="https://github.com/wickstudio" target="_blank" rel="noopener">Wick Studio</a> &middot; Apache-2.0 License</p>
+          <div class="footer-links">
+            <a href="https://discord.gg/wicks" target="_blank" rel="noopener">Discord</a>
+            <a href="https://github.com/wickstudio/discord.js-html-transcript" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.npmjs.com/package/discord.js-html-transcript" target="_blank" rel="noopener">NPM</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Right TOC -->
+    <aside class="toc-sidebar" id="tocSidebar">
+      <div class="toc-inner">
+        <h4 class="toc-heading">On this page</h4>
+        <ul id="tocList" class="toc-list"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
